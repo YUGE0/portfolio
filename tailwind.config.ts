@@ -9,9 +9,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
       },
+      fontFamily:{
+        open:['Open Sans'],
+        work:["Work Sans"],
+        inter:["Inter"],
+      },   
+      cursor:{
+        "&":'url("/andp.svg"), auto',
+      }
     },
   },
   plugins: [],
