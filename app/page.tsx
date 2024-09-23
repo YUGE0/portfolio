@@ -26,7 +26,7 @@ export default function Home() {
         <h1 className="text-5xl font-work">My Work</h1>
         {projects.map((project) => (<Work key={index} project={project} />))}
       </div>
-      <div>
+      <div className="p-20">
         <h1 className="text-5xl font-work">My Skills</h1>
       </div>
     </div>
