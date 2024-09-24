@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Nav from "./compo/nav";
 import Scro from "./compo/Scro";
+import Footer from "./compo/footer";
 
 export const metadata: Metadata = {
   title: "Yug Prajapati",
@@ -20,6 +21,7 @@ export default function RootLayout({
         <Scro/>
         <Nav/>
         {children}
+        <Footer/>
       </body>
     </html>
   );

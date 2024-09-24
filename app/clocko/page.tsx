@@ -77,9 +77,9 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className="p-16 flex flex-wrap">
-        <Link href="https://github.com/YUGE0/Clock">Github Repository</Link>
-        <Link href="https://cl0cko.vercel.app/">Visit Live</Link>
+      <div className="p-16 flex flex-wrap justify-around">
+        <Link className="px-10 p-5 rounded-xl shadow-lg shadow-black text-2xl font-work font-semibold" href="https://github.com/YUGE0/Clock">Github Repository</Link>
+        <Link className="px-10 p-5 rounded-xl shadow-lg shadow-black text-2xl font-work font-semibold" href="https://cl0cko.vercel.app/">Deployed site</Link>
       </div>
     </div>
   )
