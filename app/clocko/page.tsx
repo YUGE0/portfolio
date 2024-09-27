@@ -8,10 +8,10 @@ import Link from 'next/link'
 
 export default function Page() {
   return (
-    <div>
-      <div className="px-10 flex items-baseline justify-between">
+    <div className="mx-10 mb-10 rounded-[3rem] border-2 border-[#2A4064]">
+      <div className="p-10 flex items-baseline justify-between">
         <Link className="text-5xl font-work font-semibold" href="https://cl0cko.vercel.app/">Clocko</Link>
-        <Link className="p-2 px-10 text-3xl font-work font-semibold rounded-xl shadow-md shadow-blue-300 hover:bg-blue-500" href="https://cl0cko.vercel.app/">Visit</Link>
+        <Link className="p-2 px-10 text-3xl font-work font-semibold rounded-xl bg-[#2A4064]/80 text-white shadow-md hover:bg-white hover:shadow-[#2A4064] hover:text-[#2A4064]" href="https://cl0cko.vercel.app/">Visit</Link>
       </div>
       <p className="px-16 mt-10 text-2xl font-medium">
         I used to use a clock while studying, especially when I learned React.js. 
@@ -30,7 +30,7 @@ export default function Page() {
         <h1 className="text-5xl font-work">About</h1>
         <div className="p-10 flex items-center">
           <Image className="p-10" src={"/Hours.png"} width={800} height={500} alt="Hours" />
-          <div className="py-10 px-6 rounded-[3rem] border-r-2 border-b-2 border-black/30">
+          <div className="ml-8 p-10 rounded-[3rem] bg-[#2A4064] text-white">
             <h1 className="text-3xl font-medium font-inter">Hours</h1>
             <p className="text-xl font-inter font-light text-balance">The time is displayed in a 24-hour format, which has the constructive advantage of quickly capturing users' attention by using big and bold hours.</p>
             <h1 className="text-3xl font-medium font-inter">Seconds</h1>
@@ -46,7 +46,7 @@ export default function Page() {
         </div>
         <div className="p-10 flex items-center">
           <Image className="p-10" src={"/Minutes.png"} width={800} height={500} alt="Hours" />
-          <div className="py-10 px-6 rounded-[3rem] border-r-2 border-b-2 border-black/30">
+          <div className="ml-8 p-10 rounded-[3rem] bg-[#2A4064] text-white">
             <h1 className="text-3xl font-medium font-inter">Minutes</h1>
             <p className="text-xl font-inter font-light text-balance">Second challenging component after seconds. All the understanding and knowledge of developing it and the challenges while solving it came in handy to make this component quickly.</p>
             <h1 className="text-3xl font-medium font-inter">Day</h1>
@@ -61,7 +61,7 @@ export default function Page() {
         </div>
         <div className="p-10 flex items-center">
           <Image className="p-10" src={"/City.png"} width={800} height={500} alt="Hours" />
-          <div className="py-10 px-6 rounded-[3rem] border-r-2 border-b-2 border-black/30">
+          <div className="ml-8 p-10 rounded-[3rem] bg-[#2A4064] text-white">
             <h1 className="text-3xl font-medium font-inter">City Name</h1>
             <p className="text-xl font-inter font-light text-balance">The system can display the local time based on the user's specified city and its offset to Coordinated Universal Time (UTC). Users can input any city of their choice, and all corresponding information will be promptly displayed upon integration into the code.</p>
             <h1 className="text-3xl font-medium font-inter">Time</h1>
@@ -77,9 +77,10 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className="p-16 flex flex-wrap justify-around">
-        <Link className="px-10 p-5 rounded-xl shadow-lg shadow-black text-2xl font-work font-semibold hover:bg-black/70 hover:text-white" href="https://github.com/YUGE0/Clock">Github Repository</Link>
-        <Link className="px-10 p-5 rounded-xl shadow-lg shadow-black text-2xl font-work font-semibold hover:bg-blue-800/80 hover:text-white" href="https://cl0cko.vercel.app/">Deployed site</Link>
+      <div className="p-10 flex items-baseline flex-wrap justify-around rounded-b-[3rem] bg-[#2A4064]">
+        <h1 className="text-3xl font-medium font-inter text-white">Explore by your own:</h1>
+        <Link className="px-10 p-5 rounded-xl shadow-md text-2xl font-work font-semibold bg-white hover:bg-black/70 hover:text-white" href="https://github.com/YUGE0/Clock">Github Repository</Link>
+        <Link className="px-10 p-5 rounded-xl shadow-md text-2xl font-work font-semibold bg-white hover:bg-black/70 hover:text-white" href="https://cl0cko.vercel.app/">Deployed site</Link>
       </div>
     </div>
   )
