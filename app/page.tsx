@@ -4,6 +4,7 @@ import Link from "next/link";
 import Work from "./compo/work";
 import Scro from "./compo/Scro";
 import ParallaxText from "./compo/ParallaxText";
+import WorkCom from "./compo/work";
 
 const projects: string[] = ["auto", "clocko", "mitreisen"];
 let index = 1
@@ -24,7 +25,7 @@ export default function Home() {
       </div>
       <div className="p-20">
         <h1 className="text-5xl font-work">My Work</h1>
-        {projects.map((project) => (<Work key={index} project={project} />))}
+        {projects.map((project) => (<WorkCom key={index} project={project} />))}
       </div>
       <div className="p-20">
         <h1 className="text-5xl font-work">My Skills</h1>

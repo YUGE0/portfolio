@@ -13,11 +13,7 @@ export default function Page() {
         <Link className="text-5xl font-work font-semibold" href="https://cl0cko.vercel.app/">Clocko</Link>
         <Link className="p-2 px-10 text-3xl font-work font-semibold rounded-xl shadow-md shadow-blue-300 hover:bg-blue-500" href="https://cl0cko.vercel.app/">Visit</Link>
       </div>
-      <div className="px-10">
-       <ParallaxImage src={cw} alt="Clock Light" cap="Light"/>
-       <ParallaxImage src={cd} alt="Clock Dark" cap="Dark"/>
-      </div>
-      <p className="px-16 text-2xl font-medium">
+      <p className="px-16 mt-10 text-2xl font-medium">
         I used to use a clock while studying, especially when I learned React.js. 
         Then I thought, "Why not create a meaningful project?". 
         Many of us have created business cards, profile cards, 
@@ -26,6 +22,10 @@ export default function Page() {
         It incorporates all the concepts like props, components, hooks, and 
         conditional rendering with a special touch of Tailwind CSS.
       </p>
+      <div className="px-10">
+       <ParallaxImage src={cw} alt="Clock Light" cap="Light"/>
+       <ParallaxImage src={cd} alt="Clock Dark" cap="Dark"/>
+      </div>
       <div className="p-16">
         <h1 className="text-5xl font-work">About</h1>
         <div className="p-10 flex items-center">
@@ -78,8 +78,8 @@ export default function Page() {
         </div>
       </div>
       <div className="p-16 flex flex-wrap justify-around">
-        <Link className="px-10 p-5 rounded-xl shadow-lg shadow-black text-2xl font-work font-semibold" href="https://github.com/YUGE0/Clock">Github Repository</Link>
-        <Link className="px-10 p-5 rounded-xl shadow-lg shadow-black text-2xl font-work font-semibold" href="https://cl0cko.vercel.app/">Deployed site</Link>
+        <Link className="px-10 p-5 rounded-xl shadow-lg shadow-black text-2xl font-work font-semibold hover:bg-black/70 hover:text-white" href="https://github.com/YUGE0/Clock">Github Repository</Link>
+        <Link className="px-10 p-5 rounded-xl shadow-lg shadow-black text-2xl font-work font-semibold hover:bg-blue-800/80 hover:text-white" href="https://cl0cko.vercel.app/">Deployed site</Link>
       </div>
     </div>
   )

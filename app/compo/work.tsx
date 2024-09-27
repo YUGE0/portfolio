@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 
-export default function Work(prop:{project:string}) {
+export default function WorkCom(prop:{project:string}) {
   return (
     <Link href={`/${prop.project}`} className="flex justify-between items-center m-20 hover:px-10 border-b-2 border-black">
         <h1 className="text-5xl p-2 font-bold uppercase">{prop.project}</h1>
