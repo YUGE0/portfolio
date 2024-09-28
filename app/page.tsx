@@ -6,7 +6,7 @@ import Scro from "./compo/Scro";
 import ParallaxText from "./compo/ParallaxText";
 import WorkCom from "./compo/work";
 
-const projects: string[] = ["auto", "clocko", "mitreisen"];
+const projects: string[] = ["auto", "mitreisen", "clocko"];
 let index = 1
 
 export default function Home() {
