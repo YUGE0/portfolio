@@ -12,7 +12,7 @@ export default function Page() {
         <Link className="p-2 px-10 text-3xl font-work font-semibold rounded-xl bg-fcolor/90 text-white shadow-md hover:bg-white hover:shadow-fcolor hover:text-fcolor" href="https://autosshow.vercel.app/">Visit</Link>
       </div>
       <p className="p-10 text-2xl font-medium">
-      Next.js is a framework for developing React.js applications. 
+      "Next.js is a framework for developing React.js applications. 
       It performs server-side rendering to make websites load faster. 
       With server-side actions, we can perform backend tasks. Since it's a framework, 
       we need to follow a set of rules to develop any application. During the development of this application, 
@@ -20,7 +20,7 @@ export default function Page() {
       TypeScript provides type safety to offer additional protection to our application. 
       With Next.js, a new realm of modern development opens up. 
       Just keep in mind that there is a structure to follow and many new features like server-side rendering,
-      "use client" to perform user interaction, dynamic paths, and many more to explore.
+      "use client" to perform user interaction, dynamic paths, and many more to explore."
       </p>
       <RenderImg/>
       <div className="p-16">      

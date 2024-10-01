@@ -1,8 +1,4 @@
 import Image from "next/image";
-import img from "../public/Profile.png"
-import Link from "next/link";
-import Work from "./compo/work";
-import Scro from "./compo/Scro";
 import ParallaxText from "./compo/ParallaxText";
 import WorkCom from "./compo/work";
 
