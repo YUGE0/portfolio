@@ -12,15 +12,15 @@ export default function Page() {
         <Link className="p-2 px-10 text-3xl font-work font-semibold rounded-xl bg-fcolor/90 text-white shadow-md hover:bg-white hover:shadow-fcolor hover:text-fcolor" href="https://autosshow.vercel.app/">Visit</Link>
       </div>
       <p className="p-10 text-2xl font-medium">
-      "Next.js is a framework for developing React.js applications. 
+      Next.js is a framework for developing React.js applications. 
       It performs server-side rendering to make websites load faster. 
-      With server-side actions, we can perform backend tasks. Since it's a framework, 
+      With server-side actions, we can perform backend tasks. Since it&#39;s a framework, 
       we need to follow a set of rules to develop any application. During the development of this application, 
       I took the challenge to learn both TypeScript and Nextjs at the same time. That seems easy. In simple terms, 
       TypeScript provides type safety to offer additional protection to our application. 
       With Next.js, a new realm of modern development opens up. 
       Just keep in mind that there is a structure to follow and many new features like server-side rendering,
-      "use client" to perform user interaction, dynamic paths, and many more to explore."
+      "use client" to perform user interaction, dynamic paths, and many more to explore.
       </p>
       <RenderImg/>
       <div className="p-16">      
@@ -31,7 +31,7 @@ export default function Page() {
             <h1 className="text-3xl font-medium font-inter">Card</h1>
             <p className="text-xl font-inter font-light text-balance">
             It provides detailed information about the vehicle, 
-            including the car's image, brand logo, brand name, 
+            including the car&#39;s image, brand logo, brand name, 
             a brief product description (in this case, for the car), model, and pricing. 
             All this data is fetched directly from Supabase during server-side rendering. 
             Using ".map," all the cards are dynamically generated with information. 
@@ -58,8 +58,8 @@ export default function Page() {
           <p className="text-xl font-inter font-light text-balance">
           With React, we have access to various libraries that can help us accomplish more complex tasks in a simpler way. 
           For example, users can listen to the sound of a car, which enhances their overall experience. 
-          Implementing this is quite simple - we just need to add 'use-sound', 
-          which will allow us to add or use the 'audio' with a specified URL. 
+          Implementing this is quite simple - we just need to add "use-sound", 
+          which will allow us to add or use the "audio" with a specified URL. 
           By using state, we can enable users to play and pause actions.
           </p>
           <h1 className="mt-10 text-3xl font-medium font-inter">Learnings</h1>

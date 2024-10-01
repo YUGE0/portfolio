@@ -32,7 +32,7 @@ export default function Page() {
           <Image className="p-10" src={"/Hours.png"} width={800} height={500} alt="Hours" />
           <div className="ml-8 p-10 rounded-[3rem] bg-[#2A4064] text-white">
             <h1 className="text-3xl font-medium font-inter">Hours</h1>
-            <p className="text-xl font-inter font-light text-balance">The time is displayed in a 24-hour format, which has the constructive advantage of quickly capturing users' attention by using big and bold hours.</p>
+            <p className="text-xl font-inter font-light text-balance">The time is displayed in a 24-hour format, which has the constructive advantage of quickly capturing user&#39;s attention by using big and bold hours.</p>
             <h1 className="text-3xl font-medium font-inter">Seconds</h1>
             <p className="text-xl font-inter font-light text-balance">Seconds is a critical component requiring rendering at very brief intervals.</p>
             <h1 className="text-3xl font-medium font-inter">AM/PM</h1>
@@ -51,7 +51,7 @@ export default function Page() {
             <p className="text-xl font-inter font-light text-balance">Second challenging component after seconds. All the understanding and knowledge of developing it and the challenges while solving it came in handy to make this component quickly.</p>
             <h1 className="text-3xl font-medium font-inter">Day</h1>
             <p className="text-xl font-inter font-light text-balance">
-            It ensures you don't miss your weekend, one of the simplest to include. While full names for days could be used, this approach adds a unique element to the application.</p>
+            It ensures you don&#39;t miss your weekend, one of the simplest to include. While full names for days could be used, this approach adds a unique element to the application.</p>
             <h1 className="text-3xl font-medium font-inter">Date</h1>
             <p className="text-xl font-inter font-light text-balance">Maintaining the date in this manner is more meaningful than adhering to the conventional format. Presenting the date without the inclusion of the month and year offers a more concise and precise representation.</p>
             <h1 className="mt-10 text-3xl font-medium font-inter">Learnings</h1>
@@ -63,7 +63,7 @@ export default function Page() {
           <Image className="p-10" src={"/City.png"} width={800} height={500} alt="Hours" />
           <div className="ml-8 p-10 rounded-[3rem] bg-[#2A4064] text-white">
             <h1 className="text-3xl font-medium font-inter">City Name</h1>
-            <p className="text-xl font-inter font-light text-balance">The system can display the local time based on the user's specified city and its offset to Coordinated Universal Time (UTC). Users can input any city of their choice, and all corresponding information will be promptly displayed upon integration into the code.</p>
+            <p className="text-xl font-inter font-light text-balance">The system can display the local time based on the user&#39;s specified city and its offset to Coordinated Universal Time (UTC). Users can input any city of their choice, and all corresponding information will be promptly displayed upon integration into the code.</p>
             <h1 className="text-3xl font-medium font-inter">Time</h1>
             <p className="text-xl font-inter font-light text-balance">As a user can add any time, the web has all the information available on simple search. Therefore, they can get the UTC offset, and minor changes in the code will display the correct time.</p>
             <h1 className="text-3xl font-medium font-inter">AM/PM</h1>
