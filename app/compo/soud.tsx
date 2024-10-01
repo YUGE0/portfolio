@@ -5,7 +5,6 @@ import Image from 'next/image';
 
 export default function SoudPlayer() {  
   const [play, { sound }] = useSound("/LB744_Exhaust_MIX8D_230303.mp3");
-  const [isMuted, setIsMuted] = useState(true);
   const [isPlaying, setIsPlaying] = useState(false);
 
   const handlePlay = () => {
@@ -24,7 +23,7 @@ export default function SoudPlayer() {
     <div className="flex flex-wrap justify-around">
       <h1 className="text-5xl font-semibold p-2">FEEL THE ENGINE</h1>
       {isPlaying===false ? <Image alt='Sound' src={"/PlayWave.svg"} width={500} height={100} onClick={handlePlay}/> : <Image alt='Sound' src={"/PauseWave.svg"} width={500} height={100} onClick={handlePause}/>}     
-      <audio src={sound} muted={isMuted}/>
+      <audio src={sound}/>
     </div>
   );
 }
