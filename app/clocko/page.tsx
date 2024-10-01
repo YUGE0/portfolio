@@ -28,7 +28,7 @@ export default function Page() {
       </div>
       <div className="p-16">
         <h1 className="text-5xl font-work">About</h1>
-        <div className="p-10 flex flex-wrap xl:flex-nowrap items-center">
+        <div className="p-10 flex flex-wrap 2xl:flex-nowrap justify-around items-center">
           <Image className="p-10" src={"/Hours.png"} width={800} height={500} alt="Hours" />
           <div className="ml-8 p-10 rounded-[3rem] bg-[#2A4064] text-white">
             <h1 className="text-3xl font-medium font-inter">Hours</h1>
@@ -44,7 +44,7 @@ export default function Page() {
             </p>
           </div>
         </div>
-        <div className="p-10 flex flex-wrap 2xl:flex-nowrap items-center">
+        <div className="p-10 flex flex-wrap 2xl:flex-nowrap justify-around items-center">
           <Image className="p-10" src={"/Minutes.png"} width={800} height={500} alt="Hours" />
           <div className="ml-8 p-10 rounded-[3rem] bg-[#2A4064] text-white">
             <h1 className="text-3xl font-medium font-inter">Minutes</h1>
@@ -59,7 +59,7 @@ export default function Page() {
             </p>
           </div>
         </div>
-        <div className="p-10 flex flex-wrap xl:flex-nowrap items-center">
+        <div className="p-10 flex flex-wrap 2xl:flex-nowrap justify-around items-center">
           <Image className="p-10" src={"/City.png"} width={800} height={500} alt="Hours" />
           <div className="ml-8 p-10 rounded-[3rem] bg-[#2A4064] text-white">
             <h1 className="text-3xl font-medium font-inter">City Name</h1>
@@ -78,9 +78,11 @@ export default function Page() {
         </div>
       </div>
       <div className="p-10 flex items-baseline flex-wrap justify-around rounded-b-[3rem] bg-[#2A4064]">
-        <h1 className="text-3xl font-medium font-inter text-white">Explore by your own:</h1>
+        <h1 className="pb-4 text-3xl font-medium font-inter text-white">Explore by your own:</h1>
+        <div className="flex gap-x-10">
         <Link className="px-10 p-5 rounded-xl shadow-md text-2xl font-work font-semibold bg-white hover:bg-black/70 hover:text-white" href="https://github.com/YUGE0/Clock">Github Repository</Link>
         <Link className="px-10 p-5 rounded-xl shadow-md text-2xl font-work font-semibold bg-white hover:bg-black/70 hover:text-white" href="https://cl0cko.vercel.app/">Deployed site</Link>
+        </div>
       </div>
     </div>
   )

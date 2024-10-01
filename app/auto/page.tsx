@@ -25,7 +25,7 @@ export default function Page() {
       <RenderImg/>
       <div className="p-16">      
         <h1 className="text-5xl font-work">About</h1>
-        <div className="p-10 flex flex-wrap justify-around items-center">
+        <div className="p-10 flex flex-wrap 2xl:flex-nowrap justify-around items-center">
           <Image className="" src={"/AutoCard.png"} width={600} height={800} alt="Hours" />
           <div className="ml-8 p-10 rounded-[3rem] bg-[#2A4064] text-white w-[80rem]">
             <h1 className="text-3xl font-medium font-inter">Card</h1>
@@ -48,7 +48,7 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className="p-[6.5rem] flex flex-wrap justify-around items-center">
+      <div className="p-[6.5rem] flex flex-wrap 2xl:flex-nowrap justify-around items-center">
         <div className="w-1/2">
           <SoudPlayer/>
           <p className="text-xl font-inter font-normal text-center">Click Here</p>
@@ -71,9 +71,11 @@ export default function Page() {
         </div>
       </div>
       <div className="p-10 flex items-baseline flex-wrap justify-around rounded-b-[3rem] bg-[#2A4064]">
-        <h1 className="text-3xl font-medium font-inter text-white">Explore by your own:</h1>
-        <Link className="px-10 p-5 rounded-xl shadow-md text-2xl font-work font-semibold bg-white hover:bg-black/70 hover:text-white" href="https://github.com/YUGE0/Autos">Github Repository</Link>
-        <Link className="px-10 p-5 rounded-xl shadow-md text-2xl font-work font-semibold bg-white hover:bg-black/70 hover:text-white" href="https://autosshow.vercel.app/">Deployed site</Link>
+        <h1 className="pb-4 text-3xl font-medium font-inter text-white">Explore by your own:</h1>
+        <div className="flex gap-x-10">
+          <Link className="px-10 p-5 rounded-xl shadow-md text-2xl font-work font-semibold bg-white hover:bg-black/70 hover:text-white" href="https://github.com/YUGE0/Autos">Github Repository</Link>
+          <Link className="px-10 p-5 rounded-xl shadow-md text-2xl font-work font-semibold bg-white hover:bg-black/70 hover:text-white" href="https://autosshow.vercel.app/">Deployed site</Link>
+        </div>
       </div>
     </div>
   )
