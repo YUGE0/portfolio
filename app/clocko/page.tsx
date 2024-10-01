@@ -15,7 +15,7 @@ export default function Page() {
       </div>
       <p className="px-16 mt-10 text-2xl font-medium">
         I used to use a clock while studying, especially when I learned React.js. 
-        Then I thought, "Why not create a meaningful project?". 
+        Then I thought, Why not create a meaningful project?. 
         Many of us have created business cards, profile cards, 
         and even some clones of popular applications while learning. 
         While I did the same, I worked on this project while learning React. 
