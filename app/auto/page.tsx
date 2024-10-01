@@ -9,12 +9,23 @@ export default function Page() {
     <div className="mx-10 mb-10 rounded-[3rem] border-2 border-[#2A4064] font-work">
       <div className="p-10 flex items-baseline justify-between">
         <Link className="text-5xl font-semibold" href="https://autosshow.vercel.app/">Auto</Link>
-        <Link className="p-2 px-10 text-3xl font-semibold rounded-xl shadow-md shadow-blue-500 hover:bg-blue-500/70 animate-pulse" href="https://autosshow.vercel.app/">Visit</Link>
+        <Link className="p-2 px-10 text-3xl font-work font-semibold rounded-xl bg-fcolor/90 text-white shadow-md hover:bg-white hover:shadow-fcolor hover:text-fcolor" href="https://autosshow.vercel.app/">Visit</Link>
       </div>
+      <p className="p-10 text-2xl font-medium">
+      Next.js is a framework for developing React.js applications. 
+      It performs server-side rendering to make websites load faster. 
+      With server-side actions, we can perform backend tasks. Since it's a framework, 
+      we need to follow a set of rules to develop any application. During the development of this application, 
+      I took the challenge to learn both TypeScript and Nextjs at the same time. That seems easy. In simple terms, 
+      TypeScript provides type safety to offer additional protection to our application. 
+      With Next.js, a new realm of modern development opens up. 
+      Just keep in mind that there is a structure to follow and many new features like server-side rendering,
+      "use client" to perform user interaction, dynamic paths, and many more to explore.
+      </p>
       <RenderImg/>
       <div className="p-16">      
         <h1 className="text-5xl font-work">About</h1>
-        <div className="p-10 flex justify-around items-center">
+        <div className="p-10 flex flex-wrap justify-around items-center">
           <Image className="" src={"/AutoCard.png"} width={600} height={800} alt="Hours" />
           <div className="ml-8 p-10 rounded-[3rem] bg-[#2A4064] text-white w-[80rem]">
             <h1 className="text-3xl font-medium font-inter">Card</h1>
@@ -37,7 +48,7 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className="p-[6.5rem] flex justify-around items-center">
+      <div className="p-[6.5rem] flex flex-wrap justify-around items-center">
         <div className="w-1/2">
           <SoudPlayer/>
           <p className="text-xl font-inter font-normal text-center">Click Here</p>

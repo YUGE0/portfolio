@@ -1,5 +1,5 @@
 //Clocko page
-import Image,{ StaticImageData } from 'next/image'
+import Image from 'next/image'
 import React from 'react'
 import cw from './ClockWhite.png'
 import cd from './ClockDark.png'
@@ -11,7 +11,7 @@ export default function Page() {
     <div className="mx-10 mb-10 rounded-[3rem] border-2 border-[#2A4064]">
       <div className="p-10 flex items-baseline justify-between">
         <Link className="text-5xl font-work font-semibold" href="https://cl0cko.vercel.app/">Clocko</Link>
-        <Link className="p-2 px-10 text-3xl font-work font-semibold rounded-xl bg-[#2A4064]/80 text-white shadow-md hover:bg-white hover:shadow-[#2A4064] hover:text-[#2A4064]" href="https://cl0cko.vercel.app/">Visit</Link>
+        <Link className="p-2 px-10 text-3xl font-work font-semibold rounded-xl bg-fcolor/90 text-white shadow-md hover:bg-white hover:shadow-fcolor hover:text-fcolor" href="https://cl0cko.vercel.app/">Visit</Link>
       </div>
       <p className="px-16 mt-10 text-2xl font-medium">
         I used to use a clock while studying, especially when I learned React.js. 
@@ -28,7 +28,7 @@ export default function Page() {
       </div>
       <div className="p-16">
         <h1 className="text-5xl font-work">About</h1>
-        <div className="p-10 flex items-center">
+        <div className="p-10 flex flex-wrap xl:flex-nowrap items-center">
           <Image className="p-10" src={"/Hours.png"} width={800} height={500} alt="Hours" />
           <div className="ml-8 p-10 rounded-[3rem] bg-[#2A4064] text-white">
             <h1 className="text-3xl font-medium font-inter">Hours</h1>
@@ -44,7 +44,7 @@ export default function Page() {
             </p>
           </div>
         </div>
-        <div className="p-10 flex items-center">
+        <div className="p-10 flex flex-wrap 2xl:flex-nowrap items-center">
           <Image className="p-10" src={"/Minutes.png"} width={800} height={500} alt="Hours" />
           <div className="ml-8 p-10 rounded-[3rem] bg-[#2A4064] text-white">
             <h1 className="text-3xl font-medium font-inter">Minutes</h1>
@@ -59,7 +59,7 @@ export default function Page() {
             </p>
           </div>
         </div>
-        <div className="p-10 flex items-center">
+        <div className="p-10 flex flex-wrap xl:flex-nowrap items-center">
           <Image className="p-10" src={"/City.png"} width={800} height={500} alt="Hours" />
           <div className="ml-8 p-10 rounded-[3rem] bg-[#2A4064] text-white">
             <h1 className="text-3xl font-medium font-inter">City Name</h1>

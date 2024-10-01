@@ -9,6 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        fcolor:"#2A4064",
       },
       fontFamily:{
         open:['Open Sans'],

@@ -10,9 +10,9 @@ export default function RenderImg() {
     <div>
         <div className="flex gap-10 justify-around">
           <h1 className="p-1 text-2xl font-inter">Click to check out pages</h1>
-            {render==="Home Page"?<h1 className="p-1 text-3xl font-inter font-semibold border-b-2 border-black/50" onClick={()=>{setRender("Home Page")}}>Home Page</h1>:<h1 className="p-1 text-3xl font-inter font-semibold animate-pulse" onClick={()=>{setRender("Home Page")}}>Home Page</h1>}
-            {render==="GT3RS"?<h1 className="p-1 text-3xl font-inter font-semibold border-b-2 border-black/50" onClick={()=>{setRender("GT3RS")}}>GT3RS</h1>:<h1 className="p-1 text-3xl font-inter font-semibold animate-pulse" onClick={()=>{setRender("GT3RS")}}>GT3RS</h1>}
-            {render==="Revuelto"?<h1 className="p-1 text-3xl font-inter font-semibold border-b-2 border-black/50" onClick={()=>{setRender("Revuelto")}}>Revuelto</h1>:<h1 className="p-1 text-3xl font-inter font-semibold animate-pulse" onClick={()=>{setRender("Revuelto")}}>Revuelto</h1>}
+            {render==="Home Page"?<h1 className="p-1 text-3xl font-inter font-semibold border-b-2 border-black/50" onClick={()=>{setRender("Home Page")}}>Home Page</h1>:<h1 className="p-2 text-3xl font-inter font-semibold rounded-xl bg-fcolor text-white" onClick={()=>{setRender("Home Page")}}>Home Page</h1>}
+            {render==="GT3RS"?<h1 className="p-1 text-3xl font-inter font-semibold border-b-2 border-black/50" onClick={()=>{setRender("GT3RS")}}>GT3RS</h1>:<h1 className="p-2 text-3xl font-inter font-semibold rounded-xl bg-fcolor text-white" onClick={()=>{setRender("GT3RS")}}>GT3RS</h1>}
+            {render==="Revuelto"?<h1 className="p-1 text-3xl font-inter font-semibold border-b-2 border-black/50" onClick={()=>{setRender("Revuelto")}}>Revuelto</h1>:<h1 className="p-2 text-3xl font-inter font-semibold rounded-xl bg-fcolor text-white" onClick={()=>{setRender("Revuelto")}}>Revuelto</h1>}
         </div>
         {render==="Home Page"&&
         <div className="flex flex-col place-items-center">
