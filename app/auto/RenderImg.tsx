@@ -37,7 +37,7 @@ export default function RenderImg() {
         {render==="Revuelto"&&
         <div className="flex flex-col place-items-center">           
             <Image className="rounded-xl shadow-md" alt="home page" width={1500} height={500} src="/AutoRevuelto.png"/>
-            <p className="text-3xl font-inter font-normal text-left">
+            <p className="text-md font-inter font-normal text-left">
               Some of the model has the sound feature with help of it you can hear the sound of the engine.
             </p>
         </div>}
