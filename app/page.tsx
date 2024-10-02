@@ -19,8 +19,8 @@ export default function Home() {
           <h1 className="text-6xl sm:text-8xl font-work uppercase">It&#39;s me Yug</h1>
         </div>
       </div>
-      <div className="p-4 sm:p-20">
-        <h1 className="text-3xl md:text-6xl font-work">My Work</h1>
+      <div className="sm:p-20">
+        <h1 className="px-4 md:p-0 text-3xl md:text-6xl font-work">My Work</h1>
         {projects.map((project) => (<WorkCom key={index} project={project} />))}
       </div>
       <div className="p-4 sm:p-20">
