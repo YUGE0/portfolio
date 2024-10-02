@@ -3,15 +3,15 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 
 export default function RenderImg() {
-    const[render,setRender] = useState("Home Page");
+    const[render,setRender] = useState("");
     console.log(render);
     
   return (
     <div>
         <div className="flex flex-wrap gap-10 justify-around">
-            {render==="Home Page"?<h1 className="p-1 text-3xl font-inter font-semibold border-b-2 border-black/50" onClick={()=>{setRender("Home Page")}}>Home Page</h1>:<h1 className="p-2 text-3xl font-inter font-semibold rounded-xl bg-fcolor text-white" onClick={()=>{setRender("Home Page")}}>Home Page</h1>}
-            {render==="GT3RS"?<h1 className="p-1 text-3xl font-inter font-semibold border-b-2 border-black/50" onClick={()=>{setRender("GT3RS")}}>GT3RS</h1>:<h1 className="p-2 text-3xl font-inter font-semibold rounded-xl bg-fcolor text-white" onClick={()=>{setRender("GT3RS")}}>GT3RS</h1>}
-            {render==="Revuelto"?<h1 className="p-1 text-3xl font-inter font-semibold border-b-2 border-black/50" onClick={()=>{setRender("Revuelto")}}>Revuelto</h1>:<h1 className="p-2 text-3xl font-inter font-semibold rounded-xl bg-fcolor text-white" onClick={()=>{setRender("Revuelto")}}>Revuelto</h1>}
+            {render==="Home Page"?<h1 className="p-1 text-xl md:text-3xl font-inter font-semibold border-b-2 border-black/50" onClick={()=>{setRender("Home Page")}}>Home Page</h1>:<h1 className="p-2 text-xl md:text-3xl font-inter font-semibold rounded-xl bg-fcolor text-white" onClick={()=>{setRender("Home Page")}}>Home Page</h1>}
+            {render==="GT3RS"?<h1 className="p-1 text-xl md:text-3xl font-inter font-semibold border-b-2 border-black/50" onClick={()=>{setRender("GT3RS")}}>GT3RS</h1>:<h1 className="p-2 text-xl md:text-3xl font-inter font-semibold rounded-xl bg-fcolor text-white" onClick={()=>{setRender("GT3RS")}}>GT3RS</h1>}
+            {render==="Revuelto"?<h1 className="p-1 text-xl md:text-3xl font-inter font-semibold border-b-2 border-black/50" onClick={()=>{setRender("Revuelto")}}>Revuelto</h1>:<h1 className="p-2 text-xl md:text-3xl font-inter font-semibold rounded-xl bg-fcolor text-white" onClick={()=>{setRender("Revuelto")}}>Revuelto</h1>}
         </div>
         {render==="Home Page"&&
         <div className="flex flex-col place-items-center">

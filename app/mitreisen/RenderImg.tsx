@@ -8,8 +8,7 @@ export default function RenderImg() {
     
   return (
     <div>
-        <div className="mb-10 flex gap-10 justify-around">
-          <h1 className="p-1 text-2xl font-inter">Click to check out pages</h1>
+        <div className="mb-5 flex flex-wrap gap-10 justify-around">
             {render==="Home Page"?<h1 className="p-2 text-3xl font-inter font-semibold border-b-2 border-black/50" onClick={()=>{setRender("Home Page")}}>Home Page</h1>:<h1 className="p-2 text-3xl font-inter font-semibold rounded-xl bg-fcolor text-white" onClick={()=>{setRender("Home Page")}}>Home Page</h1>}
             {render==="Destination Page"?<h1 className="p-2 text-3xl font-inter font-semibold border-b-2 border-black/50" onClick={()=>{setRender("Destination Page")}}>Destination Page</h1>:<h1 className="p-2 text-3xl font-inter font-semibold rounded-xl bg-fcolor text-white" onClick={()=>{setRender("Destination Page")}}>Destination Page</h1>}
             {render==="Admin"?<h1 className="p-2 text-3xl font-inter font-semibold border-b-2 border-black/50" onClick={()=>{setRender("Admin")}}>Admin</h1>:<h1 className="p-2 text-3xl font-inter font-semibold rounded-xl bg-fcolor text-white" onClick={()=>{setRender("Admin")}}>Admin</h1>}

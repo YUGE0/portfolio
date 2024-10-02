@@ -24,7 +24,7 @@ export default function Page() {
       </p>
       <RenderImg/>
       <div className="md:p-16">      
-        <h1 className="mt-2 text-2xl md:text-5xl font-work font-semibold">About</h1>
+        <h1 className="mt-2 p-4 text-2xl md:text-5xl font-work font-semibold">About</h1>
         <div className="flex flex-wrap 2xl:flex-nowrap justify-around items-center">
           <Image className="md:w-1/2 md:p-10" src={"/AutoCard.png"} width={500} height={800} alt="Hours" />
           <div className="p-10 rounded-[3rem] bg-[#2A4064] text-white w-[80rem]">

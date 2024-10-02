@@ -21,7 +21,7 @@ export default function ParallaxImage({src, alt, cap }: ParallaxImageProps) {
 
   return (
     <section className="h-screen flex justify-center items-center relative snap-center">
-      <div ref={ref} className="rounded-xl shadow-slate-500 shadow-xl w-[80%] h-[20%] xl:w-[80%] xl:h-[68%] ml-10 relative bg-white overflow-hidden">
+      <div ref={ref} className="rounded-xl shadow-slate-500 shadow-xl w-[80%] h-[30%] xl:w-[80%] xl:h-[68%] ml-10 relative bg-white overflow-hidden">
         <Image src={src} alt={alt} className="absolute top-0 left-0 right-0 bottom-0 w-full h-full object-cover"/>
       </div>
       <motion.h1 className="absolute text-accent left-0 text-4xl font-bold leading-[1.2] tracking-[-0.05em]" style={{ y }}>
