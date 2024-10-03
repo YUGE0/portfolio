@@ -10,8 +10,8 @@ export default function Page() {
   return (
     <div className="mx-1 md:mx-10 mb-10 rounded-[3rem] border-2 border-[#2A4064]">
       <div className="p-10 flex items-baseline justify-between">
-        <Link className="text-3xl md:text-6xl font-work font-semibold" href="https://cl0cko.vercel.app/">Clocko</Link>
-        <Link className="p-2 px-10 text-xl md:text-3xl font-work font-semibold rounded-xl bg-fcolor/90 text-white shadow-md hover:bg-white hover:shadow-fcolor hover:text-fcolor" href="https://cl0cko.vercel.app/">Visit</Link>
+        <Link className="text-3xl md:text-6xl font-work font-semibold" href="https://cl0cko.vercel.app/" target="_blank">Clocko</Link>
+        <Link className="p-2 px-10 text-xl md:text-3xl font-work font-semibold rounded-xl bg-fcolor/90 text-white shadow-md hover:bg-white hover:shadow-fcolor hover:text-fcolor" href="https://cl0cko.vercel.app/" target="_blank">Visit</Link>
       </div>
       <p className="p-4 md:p-10 text-xl md:text-2xl font-medium">
         I used to use a clock while studying, especially when I learned React.js. 
