@@ -8,7 +8,7 @@ export default function Page() {
       <div className="p-10 flex items-baseline justify-between">
         <Link className="text-5xl font-semibold" href="">Mitreisen</Link>
       </div>
-      <p className="p-4 md:p-10 text-2xl font-medium">
+      <p className="p-4 md:p-10 text-xl md:text-2xl font-medium">
       </p>
       <RenderImg/>
       <div className="md:p-16">

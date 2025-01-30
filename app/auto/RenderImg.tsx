@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 
 export default function RenderImg() {
-    const[render,setRender] = useState("");
+    const[render,setRender] = useState("Home Page");
     console.log(render);
     
   return (

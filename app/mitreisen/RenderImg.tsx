@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export default function RenderImg() {
     const[render,setRender] = useState("Home Page");
-    console.log(render);
+    //console.log(render);
     
   return (
     <div>
