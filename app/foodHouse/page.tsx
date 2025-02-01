@@ -1,6 +1,5 @@
 import React from 'react'
 import ParallaxText from '../compo/ParallaxText'
-import Image from 'next/image'
 
 export default function Page() {
   return (
