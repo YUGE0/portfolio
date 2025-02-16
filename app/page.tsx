@@ -17,7 +17,7 @@ export default function Home() {
       <ParallaxText baseVelocity={5}>Develope</ParallaxText>
       </div>
       <div className="flex flex-wrap place-items-end">
-        <Image height={0} width={800} src="/Profile.png" alt="image"/>
+        <Image height={0} width={800} src="/WebsiteProfile.webp" alt="image"/>
         <div className="p-4 2xl:px-32">
           <h1 className="text-6xl sm:text-8xl font-work">Hello</h1>
           <h1 className="text-6xl sm:text-8xl font-work uppercase">It&#39;s me Yug</h1>
