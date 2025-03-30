@@ -4,7 +4,7 @@ import BackToTop from './backToTop'
 
 export default function Footer() {
   return (
-    <div className="mt-2 md:mx-10 p-10 rounded-t-[3rem] md:rounded-t-[5rem] border-2 border-b-8 border-fcolor">
+    <div className="mt-10 md:mx-10 p-10 rounded-t-[3rem] md:rounded-t-[5rem] border-2 border-b-8 border-fcolor">
       <h1 className="text-5xl text-fcolor font-inter font-black md:ml-8 uppercase bg-white w-fit -translate-y-16">Contact me</h1>
       <div>
         <Link href={"mailto:yugprajapati32@gmail.com"} className="flex justify-between items-baseline py-5 md:py-8 md:mx-32 hover:px-10 border-b-2 border-black">

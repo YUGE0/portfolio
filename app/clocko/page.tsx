@@ -1,9 +1,9 @@
 //Clocko page
 import Image from 'next/image'
 import React from 'react'
-import cw from './ClockWhite.png'
-import cd from './ClockDark.png'
-import ParallaxImage from '../compo/ParallaxImage'
+import cw from './ClockLight.webp'
+import cd from './ClockDark.webp'
+//import ParallaxImage from '../compo/ParallaxImage'
 import Link from 'next/link'
 
 export default function Page() {
@@ -23,11 +23,12 @@ export default function Page() {
         conditional rendering with a special touch of Tailwind CSS.
       </p>
       <div className="md:px-10">
-       <ParallaxImage src={cw} alt="Clock Light" cap="Light"/>
-       <ParallaxImage src={cd} alt="Clock Dark" cap="Dark"/>
+      <Image className="hidden lg:flex md:p-10" src={"/Clocko.webp"} width={2000} height={500} alt="Hours" />
+          <Image className="lg:hidden md:p-10" src={cd} width={2000} height={500} alt="Hours" />
+          <Image className="lg:hidden md:p-10" src={cw} width={2000} height={500} alt="Hours" />
       </div>
       <div className="md:p-16">
-        <h1 className="text-5xl font-work">About</h1>
+        <h1 className="text-5xl font-work text-center md:text-left">About</h1>
         <div className="flex flex-wrap 2xl:flex-nowrap justify-around items-center">
           <Image className="md:p-10" src={"/Hours.png"} width={800} height={500} alt="Hours" />
           <div className="p-10 rounded-[3rem] bg-[#2A4064] text-white">
