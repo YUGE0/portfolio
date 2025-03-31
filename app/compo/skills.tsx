@@ -48,7 +48,7 @@ export default function ParallaxSkills({ skills, baseVelocity = 5 }: ParallaxSki
   });
 
   return (
-    <div className="overflow-hidden whitespace-nowrap w-[1.1%]">
+    <div className="overflow-hidden whitespace-nowrap w-[0.2%] md:w-[0.362%] lg:w-[0.61%] xl:w-[0.72%] 2xl:w-[0.95%]">
       <motion.div className="flex will-change-transform gap-10" style={{ x }}>
         {/* Duplicate skills to ensure seamless looping */}
         {[...Array(100)].map((_, i) => (
