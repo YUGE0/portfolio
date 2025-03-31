@@ -32,7 +32,7 @@ export default function Home() {
         <h1 className="p-4 md:p-0 text-5xl md:text-7xl font-bold font-work text-fcolor mt-10 md:mt-0">My Skills</h1>
         <div className="flex flex-wrap justify-between">
           <div className="px-2">
-            <Skills skills={skills} baseVelocity={-10}/>
+            <Skills skills={skills} baseVelocity={-12}/>
           </div>  
         </div>
       </div>
