@@ -42,23 +42,21 @@ export default function ParallaxSkills({ skills, baseVelocity = 5 }: ParallaxSki
 
     moveBy += directionFactor.current * moveBy * velocityFactor.get();
 
-    // ✅ Correctly setting the new value
     const newX = baseX.get() + moveBy;
     baseX.set(newX <= -100 ? 0 : newX);
   });
 
   return (
-    <div className="overflow-hidden whitespace-nowrap w-[0.2%] md:w-[0.362%] lg:w-[0.61%] xl:w-[0.72%] 2xl:w-[0.95%]">
+    <div className="overflow-hidden whitespace-nowrap w-full py-10">
       <motion.div className="flex will-change-transform gap-10" style={{ x }}>
-        {/* Duplicate skills to ensure seamless looping */}
         {[...Array(100)].map((_, i) => (
           <div key={i} className="flex space-x-10 gap-2">
             {skills.map((skill, index) => (
               <div
                 key={index}
-                className="w-80 m-2 p-2 px-4 shadow-md shadow-fcolor/30 rounded-2xl flex justify-between items-center"
+                className="w-52 xl:w-80 m-2 p-2 px-4 shadow-md shadow-fcolor/30 rounded-2xl flex justify-between items-center"
               >
-                <h1 className="text-3xl font-semibold uppercase mr-4 p-2">{skill}</h1>
+                <h1 className="text-xl xl:text-3xl font-semibold uppercase mr-4 p-2">{skill}</h1>
                 <Image alt={skill} width={40} height={40} src={`/${skill}.svg`} />
               </div>
             ))}

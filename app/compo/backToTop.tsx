@@ -9,7 +9,7 @@ const BackToTop = () => {
 
   return (
     <button onClick={scrollToTop} className="mt-10 text-3xl font-bold">
-      BackToTop
+      Back To Top
     </button>
   );
 };
