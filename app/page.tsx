@@ -3,12 +3,14 @@ import ParallaxText from "./compo/ParallaxText";
 import WorkCom from "./compo/work";
 import Link from "next/link";
 import Skills from "./compo/skills";
+import PageLoader from "./compo/PageLoader";
 
 const projects: string[] = ["auto", "mitreisen", "clocko"];
 const skills: string[] = ["Nextjs","Reactjs","TailwindCSS","TypeScript","JavaScript"];
 
 export default function Home() {
   return (
+    <PageLoader page="Home" speed={400}>
     <div className="mt-20">
       <div className="grid grid-cols-1 lg:grid-cols-2 px-2 sm:px-10 items-end">
         <Image className="animate-slide-in mb-10" height={0} width={1200} src="/Profile.webp" alt="image"/>
@@ -18,7 +20,7 @@ export default function Home() {
           <h2 className="text-2xl sm:text-5xl font-normal font-work uppercase">Front-end Developer</h2>
         </div>
       </div>
-      <div className="p-2 my-10 sm:p-10">
+      <div className="p-2 my-10 sm:p-10 hover:cursor-&">
       <ParallaxText baseVelocity={-5}>DESIGN</ParallaxText>
       <ParallaxText baseVelocity={5}>Develope</ParallaxText>
       </div>
@@ -36,5 +38,6 @@ export default function Home() {
         </div>
       </div>
     </div>
+    </PageLoader>
   );
 }

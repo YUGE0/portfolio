@@ -46,7 +46,7 @@ export default function ParallaxText({ children, baseVelocity = 100 }: ParallaxP
   });
 
   return (
-    <div className="overflow-hidden whitespace-nowrap hover:cursor-&">
+    <div className="overflow-hidden whitespace-nowrap">
       <motion.div className="inline-flex will-change-transform" style={{ x }}>
         <span className="px-5 md:px-20 text-[3rem] sm:text-[5rem] md:text-[10rem] uppercase font-black font-work">{children} </span>
         <span className="px-5 md:px-20 text-[3rem] sm:text-[5rem] md:text-[10rem] uppercase font-black font-work">{children} </span>

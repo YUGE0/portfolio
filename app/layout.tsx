@@ -3,10 +3,11 @@ import "./globals.css";
 import Nav from "./compo/nav";
 import Scro from "./compo/Scro";
 import Footer from "./compo/footer";
+import AppLoader from "./compo/Apploader";
 
 export const metadata: Metadata = {
   title: "Yug Prajapati",
-  description: "Personal portfolio website",
+  description: "Personal portfolio website of Front End Developer",
 };
 
 export default function RootLayout({
@@ -17,10 +18,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+      <AppLoader>
         <Scro/>
         <Nav/>
         {children}
         <Footer/>
+      </AppLoader>
       </body>
     </html>
   );
