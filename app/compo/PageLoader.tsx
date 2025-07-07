@@ -23,7 +23,7 @@ const PageLoader = ({ children, page, speed }: PageLoaderProps) => {
   if (loading) {
     return (
       <div
-        className={`flex items-center justify-center h-screen text-fcolor text-3xl md:text-5xl font-bold text-center px-4 border-b-8 md:border-b-[1rem] border-fcolor ${
+        className={`flex bgl-loop items-center justify-center h-screen text-fcolor text-3xl md:text-5xl font-bold text-center px-4 border-b-8 md:border-b-[1rem] border-fcolor ${
           animateOut ? 'animate-slide-up' : ''
         }`}
       >

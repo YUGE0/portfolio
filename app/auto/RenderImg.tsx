@@ -8,10 +8,10 @@ export default function RenderImg() {
     
   return (
     <div>
-        <div className="flex flex-wrap gap-10 justify-around">
-            {render==="Home Page"?<h1 className="p-1 text-xl md:text-3xl font-inter font-semibold border-b-2 border-black/50" onClick={()=>{setRender("Home Page")}}>Home Page</h1>:<h1 className="p-2 text-xl md:text-3xl font-inter font-semibold rounded-xl bg-fcolor text-white" onClick={()=>{setRender("Home Page")}}>Home Page</h1>}
-            {render==="GT3RS"?<h1 className="p-1 text-xl md:text-3xl font-inter font-semibold border-b-2 border-black/50" onClick={()=>{setRender("GT3RS")}}>GT3RS</h1>:<h1 className="p-2 text-xl md:text-3xl font-inter font-semibold rounded-xl bg-fcolor text-white" onClick={()=>{setRender("GT3RS")}}>GT3RS</h1>}
-            {render==="Revuelto"?<h1 className="p-1 text-xl md:text-3xl font-inter font-semibold border-b-2 border-black/50" onClick={()=>{setRender("Revuelto")}}>Revuelto</h1>:<h1 className="p-2 text-xl md:text-3xl font-inter font-semibold rounded-xl bg-fcolor text-white" onClick={()=>{setRender("Revuelto")}}>Revuelto</h1>}
+        <div className="flex flex-wrap gap-3 md:gap-10 justify-around">
+            {render==="Home Page" ? <Image className="w-1/6" src="/homeautoh.svg" width={100} height={0} onClick={()=>{setRender("Home Page")}} alt="home"/> : <Image className="w-1/6" src="/homeauto.svg" width={100} height={0} onClick={()=>{setRender("Home Page")}} alt="home"/>}
+            {render==="GT3RS" ? <Image className="w-1/6" src="/gt3rsh.svg" width={100} height={0} onClick={()=>{setRender("GT3RS")}} alt="GT3RS"/> : <Image className="w-1/6" src="/gt3rs.svg" width={100} height={0} onClick={()=>{setRender("GT3RS")}} alt="GT3RS"/>}
+            {render==="Revuelto" ? <Image className="w-1/6" src="/revueltoh.svg" width={100} height={0} onClick={()=>{setRender("Revuelto")}} alt="Revuelto"/> : <Image className="w-1/6" src="/revuelto.svg" width={100} height={0} onClick={()=>{setRender("Revuelto")}} alt="Revuelto"/>}
         </div>
         {render==="Home Page"&&
         <div className="flex flex-col place-items-center">

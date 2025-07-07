@@ -8,11 +8,11 @@ export default function RenderImg() {
     
   return (
     <div>
-        <div className="mb-5 flex flex-wrap gap-10 justify-around">
-            {render==="Home Page"?<h1 className="p-2 text-3xl font-inter font-semibold border-b-2 border-black/50" onClick={()=>{setRender("Home Page")}}>Home Page</h1>:<h1 className="p-2 text-3xl font-inter font-semibold rounded-xl bg-fcolor text-white" onClick={()=>{setRender("Home Page")}}>Home Page</h1>}
-            {render==="Destination Page"?<h1 className="p-2 text-3xl font-inter font-semibold border-b-2 border-black/50" onClick={()=>{setRender("Destination Page")}}>Destination Page</h1>:<h1 className="p-2 text-3xl font-inter font-semibold rounded-xl bg-fcolor text-white" onClick={()=>{setRender("Destination Page")}}>Destination Page</h1>}
-            {render==="Admin"?<h1 className="p-2 text-3xl font-inter font-semibold border-b-2 border-black/50" onClick={()=>{setRender("Admin")}}>Admin</h1>:<h1 className="p-2 text-3xl font-inter font-semibold rounded-xl bg-fcolor text-white" onClick={()=>{setRender("Admin")}}>Admin</h1>}
-            {render==="Booking Pages"?<h1 className="p-2 text-3xl font-inter font-semibold border-b-2 border-black/50" onClick={()=>{setRender("Booking Pages")}}>Booking Pages</h1>:<h1 className="p-2 text-3xl font-inter font-semibold rounded-xl bg-fcolor text-white" onClick={()=>{setRender("Booking Pages")}}>Booking Pages</h1>}
+        <div className="mb-5 flex gap-3 lg:gap-10 justify-around">
+            {render==="Home Page" ? <Image className="w-1/6" src="/homeh.svg" width={100} height={0} onClick={()=>{setRender("Home Page")}} alt="home"/> : <Image className="w-1/6" src="/home.svg" width={100} height={0} onClick={()=>{setRender("Home Page")}} alt="home"/>}
+            {render==="Destination Page" ? <Image className="w-1/6" src="/destinationh.svg" width={100} height={0} onClick={()=>{setRender("Destination Page")}} alt="destination"/> : <Image className="w-1/6" src="/destination.svg" width={100} height={0} onClick={()=>{setRender("Destination Page")}} alt="destination"/>}
+            {render==="Admin" ? <Image className="w-1/6" src="/adminh.svg" width={100} height={0} onClick={()=>{setRender("Admin")}} alt="admin"/> : <Image className="w-1/6" src="/admin.svg" width={100} height={0} onClick={()=>{setRender("Admin")}} alt="admin"/>}
+            {render==="Booking Pages" ? <Image className="w-1/6" src="/bookingh.svg" width={100} height={0} onClick={()=>{setRender("Booking Pages")}} alt="Booking Pages"/> : <Image className="w-1/6" src="/booking.svg" width={100} height={0} onClick={()=>{setRender("Booking Pages")}} alt="Booking Pages"/>}
         </div>
         {render==="Home Page"&&
         <div className="flex flex-col place-items-center">

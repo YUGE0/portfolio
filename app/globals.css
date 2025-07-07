@@ -31,4 +31,55 @@ p{
   .text-balance {
     text-wrap: balance;
   }
+
+  .bgs-loop {
+    @apply bg-cover bg-center bg-no-repeat bg-fixed;
+    animation: SLoop 2s infinite;
+  }
+
+  .bgw-loop {
+    @apply bg-cover bg-center bg-no-repeat bg-fixed;
+    animation: WLoop 2s infinite;
+  }
+  
+  .bgl-loop {
+    @apply bg-cover bg-center bg-repeat bg-fixed;
+    animation: LLoop 2s infinite;
+  }
+}
+
+@keyframes SLoop {
+  0% {
+    background-image: url('/F1.png');
+  }
+  50% {
+    background-image: url('/F2.png');
+  }
+  100% {
+    background-image: url('/F1.png');
+  }
+}
+
+@keyframes WLoop {
+  0% {
+    background-image: url('/FW1.png');
+  }
+  50% {
+    background-image: url('/FW2.png');
+  }
+  100% {
+    background-image: url('/FW1.png');
+  }
+}
+
+@keyframes LLoop {
+  0% {
+    background-image: url('/FL1.png');
+  }
+  50% {
+    background-image: url('/FL2.png');
+  }
+  100% {
+    background-image: url('/FL1.png');
+  }
 }

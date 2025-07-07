@@ -11,7 +11,7 @@ export default function Page() {
     <div className="mx-1 md:mx-10 mb-10 rounded-[3rem] border-2 border-b-0 border-[#2A4064]">
       <div className="p-10 flex items-baseline justify-between">
         <Link className="text-3xl md:text-6xl font-work font-semibold" href="https://cl0cko.vercel.app/" target="_blank">Clocko</Link>
-        <Link className="p-2 px-10 text-xl md:text-3xl font-work font-semibold rounded-xl bg-fcolor/90 text-white shadow-md hover:bg-white hover:shadow-fcolor hover:text-fcolor" href="https://cl0cko.vercel.app/" target="_blank">Visit</Link>
+        <Link className="flex justify-end" href="https://cl0cko.vercel.app/" target="_blank"><Image className="w-2/6 md:w-3/6 lg:w-4/6" src="/visit.svg" width={100} height={0} alt="visit"/></Link>
       </div>
       <p className="p-4 md:p-10 text-xl md:text-2xl font-medium">
         I used to use a clock while studying, especially when I learned React.js. 
@@ -73,7 +73,7 @@ export default function Page() {
             <p className="text-md md:text-xl font-inter font-light text-balance">The theme feature offers users the ability to customize their visual presentation by selecting a dark or light mode. Given the current preference for dark themes among users, providing this option is advantageous.</p>
             <h1 className="text-3xl font-medium font-inter">Full Screen</h1>
             <p className="text-md md:text-xl font-inter font-light text-balance">Utilizing a full-screen display allows users to maximize the available display area. This feature can serve as a screensaver, providing a visual indication of the passage of time.</p>
-            <h1 className="mt-10 text-3xl font-medium font-inter">Learnings</h1>
+            <h1 className="border-t-2 pt-3 mt-6 text-3xl font-medium font-inter">Learnings</h1>
             <p className="text-md md:text-xl font-inter font-light text-balance">The interface of this application is notable for its full-screen display and dark theme. Furthermore, the implementation of time display for various cities requires careful consideration, as it involves adjusting the UTC offset to accurately reflect the time difference. The theme feature allows users to personalize their preferred visual presentation, whether opting for a dark or light mode. With a full-screen display, users can maximize their utilization of the available screen space.</p>
           </div>
         </div>

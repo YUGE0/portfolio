@@ -37,7 +37,7 @@ export default function AppLoader({ children }: AppLoaderProps) {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center h-screen text-fcolor text-3xl md:text-5xl font-bold text-center px-4 transition-all duration-500 ease-in-out">
+      <div className="flex items-center justify-center h-screen text-fcolor text-3xl md:text-5xl font-bold text-center px-4 transition-all duration-500 ease-in-out bgs-loop lg:bgw-loop">
         {loadingMessages[messageIndex].type === 'text' ? (
           <h1 className="uppercase animate-fade-in">{loadingMessages[messageIndex].content}</h1>
         ) : (

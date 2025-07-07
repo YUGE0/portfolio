@@ -9,7 +9,7 @@ export default function Page() {
     <div className="mx-1 md:mx-10 mb-10 rounded-[3rem] border-2 border-b-0 border-[#2A4064] font-work">
       <div className="p-10 flex items-center justify-between">
         <Link className="text-3xl md:text-6xl font-semibold" href="https://autosshow.vercel.app/">Auto</Link>
-        <Link className="p-2 px-10 text-xl md:text-3xl font-work font-semibold rounded-xl bg-fcolor/90 text-white shadow-md hover:bg-white hover:shadow-fcolor hover:text-fcolor" href="https://autosshow.vercel.app/">Visit</Link>
+        <Link className="flex justify-end" href="https://autosshow.vercel.app/"><Image className="w-2/6 md:w-3/6 lg:w-4/6" src="/visit.svg" width={100} height={0} alt="visit"/></Link>
       </div>
       <p className="p-4 md:p-10 text-xl md:text-2xl font-medium">
       Next.js is a framework for developing React.js applications. 
