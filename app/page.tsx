@@ -4,9 +4,7 @@ import WorkCom from "./compo/work";
 import Link from "next/link";
 import Skills from "./compo/skills";
 import PageLoader from "./compo/PageLoader";
-import { lazy } from "react";
 
-//const projects: string[] = ["auto", "mitreisen", "clocko"];
 interface WorkProps {
   project:string;
   pageurl:string;

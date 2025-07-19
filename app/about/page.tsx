@@ -94,7 +94,7 @@ export default function page() {
                 </div>
               </div>
               <div className="p-5 lg:p-0 text-pretty">
-                <h1>"The best way to predict the future is to create it."</h1>
+                <h1>The best way to predict the future is to create it.</h1>
                 <h5 className="text-3xl px-8 text-end font-work font-light">- Peter Drucker</h5>
               </div>
             </div>
