@@ -8,7 +8,7 @@ import Link from 'next/link'
 
 export default function Page() {
   return (
-    <div className="mx-1 md:mx-10 mb-10 rounded-[3rem] border-2 border-b-0 border-[#2A4064]">
+    <div className="mx-1 md:mx-10 mb-10 rounded-[3rem] border-2 border-b-0 border-fcolor">
       <div className="p-10 flex items-baseline justify-between">
         <Link className="text-3xl md:text-6xl font-work font-semibold" href="https://cl0cko.vercel.app/" target="_blank">Clocko</Link>
         <Link className="flex justify-end" href="https://cl0cko.vercel.app/" target="_blank"><Image className="w-2/6 md:w-3/6 lg:w-4/6" src="/visit.svg" width={100} height={0} alt="visit"/></Link>
@@ -31,7 +31,7 @@ export default function Page() {
         <h1 className="text-5xl font-work text-center md:text-left">About</h1>
         <div className="flex flex-wrap 2xl:flex-nowrap justify-around items-center">
           <Image className="md:p-10" src={"/Hours.png"} width={800} height={500} alt="Hours" />
-          <div className="p-10 rounded-[3rem] bg-[#2A4064] text-white">
+          <div className="p-10 rounded-[3rem] bg-fcolor text-white">
             <h1 className="text-3xl font-medium font-inter">Hours</h1>
             <p className="text-md md:text-xl font-inter font-light text-balance">The time is displayed in a 24-hour format, which has the constructive advantage of quickly capturing user&#39;s attention by using big and bold hours.</p>
             <h1 className="text-3xl font-medium font-inter">Seconds</h1>
@@ -47,7 +47,7 @@ export default function Page() {
         </div>
         <div className="md:p-10 flex flex-wrap 2xl:flex-nowrap justify-around items-center">
           <Image className="md:p-10" src={"/Minutes.png"} width={800} height={500} alt="Hours" />
-          <div className="p-10 rounded-[3rem] bg-[#2A4064] text-white">
+          <div className="p-10 rounded-[3rem] bg-fcolor text-white">
             <h1 className="text-3xl font-medium font-inter">Minutes</h1>
             <p className="text-md md:text-xl font-inter font-light text-balance">Second challenging component after seconds. All the understanding and knowledge of developing it and the challenges while solving it came in handy to make this component quickly.</p>
             <h1 className="text-3xl font-medium font-inter">Day</h1>
@@ -62,7 +62,7 @@ export default function Page() {
         </div>
         <div className="md:p-10 flex flex-wrap 2xl:flex-nowrap justify-around items-center">
           <Image className="md:p-10" src={"/City.png"} width={800} height={500} alt="Hours" />
-          <div className="p-10 rounded-[3rem] bg-[#2A4064] text-white">
+          <div className="p-10 rounded-[3rem] bg-fcolor text-white">
             <h1 className="text-3xl font-medium font-inter">City Name</h1>
             <p className="text-md md:text-xl font-inter font-light text-balance">The system can display the local time based on the user&#39;s specified city and its offset to Coordinated Universal Time (UTC). Users can input any city of their choice, and all corresponding information will be promptly displayed upon integration into the code.</p>
             <h1 className="text-3xl font-medium font-inter">Time</h1>
@@ -78,7 +78,7 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className="mt-10 p-10 flex items-baseline flex-wrap justify-around rounded-b-[3rem] bg-[#2A4064]">
+      <div className="mt-10 p-10 flex items-baseline flex-wrap justify-around rounded-b-[3rem] bg-fcolor">
         <h1 className="pb-4 text-3xl font-medium font-inter text-white">Explore by your own:</h1>
         <div className="flex flex-wrap gap-10">
         <Link className="px-10 p-5 rounded-xl shadow-md text-lg font-work font-semibold bg-white hover:bg-black/70 hover:text-white" href="https://github.com/YUGE0/Clock">Github Repository</Link>

@@ -16,9 +16,10 @@ interface ParallaxProps {
   baseVelocity: number;
 }
 
-export default function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
+export default function ParallaxText({ children, baseVelocity = 100}: ParallaxProps) {
   const baseX = useMotionValue(0);
   const { scrollY } = useScroll();
+  
   const scrollVelocity = useVelocity(scrollY);
   const smoothVelocity = useSpring(scrollVelocity, {
     damping: 50,
@@ -48,10 +49,10 @@ export default function ParallaxText({ children, baseVelocity = 100 }: ParallaxP
   return (
     <div className="overflow-hidden whitespace-nowrap">
       <motion.div className="inline-flex will-change-transform" style={{ x }}>
-        <span className="px-5 md:px-20 text-[3rem] sm:text-[5rem] md:text-[10rem] uppercase font-black font-work">{children} </span>
-        <span className="px-5 md:px-20 text-[3rem] sm:text-[5rem] md:text-[10rem] uppercase font-black font-work">{children} </span>
-        <span className="px-5 md:px-20 text-[3rem] sm:text-[5rem] md:text-[10rem] uppercase font-black font-work">{children} </span>
-        <span className="px-5 md:px-20 text-[3rem] sm:text-[5rem] md:text-[10rem] uppercase font-black font-work">{children} </span>
+        <span className={`px-5 md:px-20 text-[3rem] sm:text-[5rem] md:text-[10rem] uppercase font-black font-work`}>{children} </span>
+        <span className={`px-5 md:px-20 text-[3rem] sm:text-[5rem] md:text-[10rem] uppercase font-black font-work`}>{children} </span>
+        <span className={`px-5 md:px-20 text-[3rem] sm:text-[5rem] md:text-[10rem] uppercase font-black font-work`}>{children} </span>
+        <span className={`px-5 md:px-20 text-[3rem] sm:text-[5rem] md:text-[10rem] uppercase font-black font-work`}>{children} </span>
       </motion.div>
     </div>
   );

@@ -5,7 +5,7 @@ interface PageLoaderProps {
   children: ReactNode;
   page?: string;
   speed?: number;
-}
+} 
 
 const PageLoader = ({ children, page, speed }: PageLoaderProps) => {
   const [loading, setLoading] = useState(true);

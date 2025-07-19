@@ -6,7 +6,7 @@ import RenderImg from './RenderImg'
 
 export default function Page() {
   return (
-    <div className="mx-1 md:mx-10 mb-10 rounded-[3rem] border-2 border-b-0 border-[#2A4064] font-work">
+    <div className="mx-1 md:mx-10 mb-10 rounded-[3rem] border-2 border-b-0 border-fcolor font-work">
       <div className="p-10 flex items-center justify-between">
         <Link className="text-3xl md:text-6xl font-semibold" href="https://autosshow.vercel.app/">Auto</Link>
         <Link className="flex justify-end" href="https://autosshow.vercel.app/"><Image className="w-2/6 md:w-3/6 lg:w-4/6" src="/visit.svg" width={100} height={0} alt="visit"/></Link>
@@ -27,7 +27,7 @@ export default function Page() {
         <h1 className="mt-2 p-4 text-2xl md:text-5xl font-work font-semibold">About</h1>
         <div className="flex flex-wrap 2xl:flex-nowrap justify-around items-center">
           <Image className="md:w-1/2 md:p-10" src={"/AutoCard.png"} width={500} height={800} alt="Hours" />
-          <div className="p-10 rounded-[3rem] bg-[#2A4064] text-white w-[80rem]">
+          <div className="p-10 rounded-[3rem] bg-fcolor text-white w-[80rem]">
             <h1 className="text-3xl font-medium font-inter">Card</h1>
             <p className="text-md md:text-xl font-inter font-light text-balance">
             It provides detailed information about the vehicle, 
@@ -53,7 +53,7 @@ export default function Page() {
           <SoudPlayer/>
           <p className="text-xl font-inter font-normal text-center">Click Here</p>
         </div>
-        <div className="p-10 rounded-[3rem] bg-[#2A4064] text-white w-[80rem]">
+        <div className="p-10 rounded-[3rem] bg-fcolor text-white w-[80rem]">
           <h1 className="text-3xl font-medium font-inter">Use Audio</h1>
           <p className="text-md md:text-xl font-inter font-light text-balance">
           With React, we have access to various libraries that can help us accomplish more complex tasks in a simpler way. 
@@ -70,7 +70,7 @@ export default function Page() {
           </p>
         </div>
       </div>
-      <div className="mt-10 p-10 flex items-baseline flex-wrap justify-around rounded-b-[3rem] bg-[#2A4064]">
+      <div className="mt-10 p-10 flex items-baseline flex-wrap justify-around rounded-b-[3rem] bg-fcolor">
         <h1 className="pb-4 text-3xl font-medium font-inter text-white">Explore by your own:</h1>
         <div className="flex flex-wrap gap-10">
           <Link className="px-10 p-5 rounded-xl shadow-md text-lg font-work font-semibold bg-white hover:bg-black/70 hover:text-white" href="https://github.com/YUGE0/Autos">Github Repository</Link>

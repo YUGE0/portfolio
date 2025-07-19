@@ -1,13 +1,43 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-export default function WorkCom(prop:{project:string}) {
+interface WorkProps {
+  project:string;
+  pageurl:string;
+  type:string;
+  des:string;
+  imgurl:string;
+}
+
+export default function WorkCom({project,pageurl,type,des,imgurl}:WorkProps) {
   return (
-    <Link href={`/${prop.project}`} className="flex justify-between items-baseline mx-2 my-10 sm:m-10 md:m-20 hover:px-10 border-b-2 border-black">
-        <h4 className="pb-5 md:pb-10 font-bold uppercase">{prop.project}</h4>
-        <svg width="45" height="22" viewBox="0 0 45 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1 21L30.2013 21C30.3962 21 30.5868 20.9431 30.7497 20.8362L41.9232 13.5087C43.7296 12.324 43.7296 9.67598 41.9232 8.49133L31.2492 1.49134C30.7604 1.17078 30.1886 1 29.604 1L1 1" stroke="black" strokeWidth="2" strokeLinecap="round"/>
-        </svg>
+    <Link className="" href={`/${pageurl}`}>
+      {type=="widget"?
+      <div className="rounded-[2rem] animate-fade-in shadow-md border border-black/5 hover:shadow-fcolor/50 hover:shadow-lg">
+        <Image className="w-full rounded-t-[2rem]" src={imgurl} width={1440} height={720} alt="Ongoing Projects"/>
+        <span className="-translate-y-14 h-16 w-full block bg-gradient-to-b from-white/0 via-white to-white"></span>
+        <div className="mx-10 -mt-10 flex justify-between items-baseline mb-5 hover:px-10 border-b-2 border-black">
+          <h4 className="pb-5 font-bold uppercase">{project}</h4>
+          <svg width="45" height="32" viewBox="0 0 45 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 21L30.2013 21C30.3962 21 30.5868 20.9431 30.7497 20.8362L41.9232 13.5087C43.7296 12.324 43.7296 9.67598 41.9232 8.49133L31.2492 1.49134C30.7604 1.17078 30.1886 1 29.604 1L1 1" stroke="black" strokeWidth="2" strokeLinecap="round"/>
+          </svg>
+        </div>
+        <p className="p-10 pt-0 text-xl">{des}</p>
+      </div>:
+      <div className="rounded-2xl grid lg:grid-cols-2 shadow-md border border-black/10 hover:shadow-fcolor/50 hover:shadow-lg">
+        <Image className="w-full rounded-t-2xl lg:rounded-l-2xl" src={imgurl} width={1440} height={720} alt="Ongoing Projects"/>  
+        <div className="lg:-translate-x-20 lg:pl-28 pt-8 lg:pt-32 bg-gradient-to-r from-white/0 from-0% via-[7%] via-white to-white">
+        <div className="mx-10 flex justify-between items-baseline mb-5 hover:px-10 border-b-2 border-black">
+          <h4 className="pb-5 font-bold uppercase">{project}</h4>
+          <svg width="45" height="32" viewBox="0 0 45 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 21L30.2013 21C30.3962 21 30.5868 20.9431 30.7497 20.8362L41.9232 13.5087C43.7296 12.324 43.7296 9.67598 41.9232 8.49133L31.2492 1.49134C30.7604 1.17078 30.1886 1 29.604 1L1 1" stroke="black" strokeWidth="2" strokeLinecap="round"/>
+          </svg>
+        </div>
+        <p className="p-10 pt-0 text-xl">{des}</p>
+        </div>
+      </div>
+      }  
     </Link>
   )
 }

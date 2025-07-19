@@ -11,6 +11,9 @@ const config: Config = {
       colors: {
         fcolor:"#2A4064",
       },
+      borderRadius:{
+        '5xl': '2rem',
+      },
       fontFamily:{
         open:['Open Sans'],
         work:["Work Sans"],
