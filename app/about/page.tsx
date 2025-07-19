@@ -69,7 +69,6 @@ export default function page() {
           </div>
         </div>
         <div className="lg:col-span-2 space-y-10">
-          <div className="p-5 lg:p-10 text-xl font-work lg:rounded-5xl shadow-md shadow-fcolor"><h3 className='pb-2'>Building from the ground up</h3>I have had the privilege of collaborating with small and emerging startups, which has provided a robust foundation for my personal and professional development. At my initial organization, my dedication and performance were duly recognized, enabling me to accomplish significant milestones early in my career. I am particularly grateful to the mentors who dedicated their time to assist me in cultivating strong technical skills. Building upon that experience, I was honored to receive the Employee of the Month award during my first month at my subsequent company. By leveraging the knowledge I had acquired, I was able to make meaningful contributions through efficient and high-impact work. However, I ultimately decided to pursue other opportunities, as I hold a strong belief in the importance of working in environments where efforts are genuinely acknowledged and valued an aspect that I found to be lacking in that role.</div>
           <div className="grid lg:grid-cols-3 gap-10">
             <div className="lg:col-span-2 lg:rounded-5xl grid grid-rows-3 gap-10">
               <div className="grid lg:grid-cols-3 gap-10 row-span-2">
@@ -86,10 +85,10 @@ export default function page() {
                     <p className="">Portfolio website</p>  
                   </Link>
                   <div className="grid grid-cols-2 gap-5">
-                    <Link href="" className="text-transparent hover:text-white text-center"><Image className="" src="/FigmaIcon.svg" width={800} height={0} alt="figma"/><p>Figma</p></Link>
-                    <Link href="" className="text-transparent hover:text-white text-center"><Image className="" src="/LinkdinIcon.svg" width={800} height={0} alt="linkdin"/><p>Linkdin</p></Link>
-                    <Link href="" className="text-transparent hover:text-white text-center"><Image className="" src="/GithubIcon.svg" width={800} height={0} alt="github"/><p>Github</p></Link>
-                    <Link href="" className="text-transparent hover:text-white text-center"><Image className="" src="/EmailIcon.svg" width={800} height={0} alt="email"/><p>Email</p></Link>
+                    <Link href={"https://www.figma.com/@_yug"} target="_blank" className="text-transparent hover:text-white text-center"><Image className="" src="/FigmaIcon.svg" width={800} height={0} alt="figma"/><p>Figma</p></Link>
+                    <Link href={"https://www.linkedin.com/in/yug-prajapati-70524926b/"} target="_blank" className="text-transparent hover:text-white text-center"><Image className="" src="/LinkdinIcon.svg" width={800} height={0} alt="linkdin"/><p>Linkdin</p></Link>
+                    <Link href={"https://github.com/YUGE0"} target="_blank" className="text-transparent hover:text-white text-center"><Image className="" src="/GithubIcon.svg" width={800} height={0} alt="github"/><p>Github</p></Link>
+                    <Link href={"mailto:yugprajapati32@gmail.com"} className="text-transparent hover:text-white text-center"><Image className="" src="/EmailIcon.svg" width={800} height={0} alt="email"/><p>Email</p></Link>
                   </div>
                 </div>
               </div>
@@ -103,6 +102,7 @@ export default function page() {
               {projects.map((project) => (<WorkCom key={project.project} {...project} />))}
             </div>
           </div>
+          <div className="p-5 lg:p-10 text-xl font-work lg:rounded-5xl shadow-md shadow-fcolor"><h3 className='pb-2'>Building from the ground up</h3>I have had the privilege of collaborating with small and emerging startups, which has provided a robust foundation for my personal and professional development. At my initial organization, my dedication and performance were duly recognized, enabling me to accomplish significant milestones early in my career. I am particularly grateful to the mentors who dedicated their time to assist me in cultivating strong technical skills. Building upon that experience, I was honored to receive the Employee of the Month award during my first month at my subsequent company. By leveraging the knowledge I had acquired, I was able to make meaningful contributions through efficient and high-impact work. However, I ultimately decided to pursue other opportunities, as I hold a strong belief in the importance of working in environments where efforts are genuinely acknowledged and valued an aspect that I found to be lacking in that role.</div>
         </div>
       </div>
     </PageLoader>
