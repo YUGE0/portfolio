@@ -4,6 +4,7 @@ import Nav from "./compo/nav";
 import Scro from "./compo/Scro";
 import Footer from "./compo/footer";
 import AppLoader from "./compo/Apploader";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: "Yug Prajapati",
@@ -22,6 +23,7 @@ export default function RootLayout({
         <Scro/>
         <Nav/>
         {children}
+        <SpeedInsights/>
         <Footer/>
       </AppLoader>
       </body>
