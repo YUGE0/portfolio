@@ -41,7 +41,11 @@ const skills: string[] = ["Nextjs","Reactjs","TailwindCSS","TypeScript","JavaScr
 export default function Home() {
   return (
     <PageLoader page="Home" speed={400}>
-    <div className="mt-20">
+    <div className="mt-8">
+    <div className="p-2 my-10 sm:p-10 hover:cursor-&">
+      <ParallaxText baseVelocity={-5}>DESIGN</ParallaxText>
+      <ParallaxText baseVelocity={5}>Develope</ParallaxText>
+      </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 px-2 sm:px-10 items-end">
         <Image className="animate-slide-in mb-10" loading="lazy" height={0} width={1200} src="/Profile.webp" alt="image"/>
         <div className="py-4 sm:p-4 2xl:px-32">
@@ -49,10 +53,6 @@ export default function Home() {
           <h2 className="uppercase">It&#39;s me Yug</h2>
           <h2 className="text-2xl sm:text-5xl font-normal font-work uppercase">Front-end Developer</h2>
         </div>
-      </div>
-      <div className="p-2 my-10 sm:p-10 hover:cursor-&">
-      <ParallaxText baseVelocity={-5}>DESIGN</ParallaxText>
-      <ParallaxText baseVelocity={5}>Develope</ParallaxText>
       </div>
       <div className="mt-10 p-2 sm:p-10">
         <Image className="w-full my-20 sm:w-4/6 md:w-3/6 xl:w-2/6" src="/mw.svg" width={100} height={0} alt="My Work"/>

@@ -19,13 +19,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-      <AppLoader>
-        <Scro/>
-        <Nav/>
-        {children}
-        <SpeedInsights/>
-        <Footer/>
-      </AppLoader>
+        <AppLoader>
+          <Scro/>
+          <div className="pb-28">
+            {children}
+            <SpeedInsights/>
+          </div>
+          <Nav/>
+          <Footer/>
+        </AppLoader>
       </body>
     </html>
   );

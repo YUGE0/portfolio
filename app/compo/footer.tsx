@@ -5,8 +5,15 @@ import Image from 'next/image'
 
 export default function Footer() {
   return (
-    <div className="mt-10 md:mx-10 p-10 rounded-t-[3rem] md:rounded-t-[5rem] border-2 border-b-8 border-fcolor">
-      <Image className="w-full sm:w-4/6 md:w-3/6 xl:w-2/6 -translate-y-[3.6rem] lg:-translate-y-[4.6rem]" src="/cm.svg" width={100} height={0} alt="Ongoing Projects"/>
+    <footer id="site-footer" className="mt-10 md:mx-10 p-10 rounded-t-[3rem] md:rounded-t-[5rem] border-2 border-b-8 border-fcolor">
+      <div
+        id="footer-dock-row"
+        className="relative flex items-end -translate-y-[3.6rem] lg:-translate-y-[4.6rem]"
+      >
+        <div id="contact-me-badge" className="w-full shrink-0 sm:w-4/6 md:w-3/6 xl:w-2/6">
+          <Image className="w-full" src="/cm.svg" width={800} height={100} alt="Contact Me"/>
+        </div>
+      </div>
       <div>
         <Link href={"mailto:yugprajapati32@gmail.com"} className="flex justify-between items-baseline py-5 md:py-8 md:mx-32 hover:px-10 border-b-2 border-black">
           <h4 className="uppercase">Email Me</h4>
@@ -36,6 +43,6 @@ export default function Footer() {
           <BackToTop/>
         </div>
       </div>
-    </div>
+    </footer>
   )
 }

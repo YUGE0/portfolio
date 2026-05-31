@@ -3,6 +3,7 @@ import PageLoader from '../compo/PageLoader'
 import ParallaxText from '../compo/ParallaxText'
 import Image from 'next/image'
 import WorkCom from '../compo/work';
+import Experience from '../compo/experience';
 import Link from 'next/link';
 
 interface WorkProps {
@@ -105,6 +106,8 @@ export default function page() {
           <div className="p-5 lg:p-10 text-xl font-work lg:rounded-5xl shadow-md shadow-fcolor"><h3 className='pb-2'>Building from the ground up</h3>I have had the privilege of collaborating with small and emerging startups, which has provided a robust foundation for my personal and professional development. At my initial organization, my dedication and performance were duly recognized, enabling me to accomplish significant milestones early in my career. I am particularly grateful to the mentors who dedicated their time to assist me in cultivating strong technical skills. Building upon that experience, I was honored to receive the Employee of the Month award during my first month at my subsequent company. By leveraging the knowledge I had acquired, I was able to make meaningful contributions through efficient and high-impact work. However, I ultimately decided to pursue other opportunities, as I hold a strong belief in the importance of working in environments where efforts are genuinely acknowledged and valued an aspect that I found to be lacking in that role.</div>
         </div>
       </div>
+
+      <Experience />
     </PageLoader>
   )
 }

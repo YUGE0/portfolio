@@ -10,8 +10,8 @@ const loadingMessages = [
   { type: 'text', content: 'HEY' },
   { type: 'text', content: "It's Me YUG" },
   // { type: 'image', content: '/ProfileLoad.webp' },
-  { type: 'text', content: 'Welcome to my...' },
-  { type: 'text', content: 'Space...' },
+  // { type: 'text', content: 'Welcome to my...' },
+  // { type: 'text', content: 'Space...' },
   { type: 'text', content: 'Initializing...' },
 ];
 
@@ -27,7 +27,7 @@ export default function AppLoader({ children }: AppLoaderProps) {
     const timer = setTimeout(() => {
       setLoading(false);
       clearInterval(interval);
-    }, 4000);
+    }, 2000);
 
     return () => {
       clearTimeout(timer);
