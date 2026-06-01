@@ -79,20 +79,20 @@ function ExperienceCard({
   learned,
 }: ExperienceProps) {
   return (
-    <div className="p-5 lg:p-10 lg:rounded-5xl shadow-md shadow-fcolor space-y-6 font-work">
+    <div className="p-4 sm:p-5 lg:p-10 lg:rounded-5xl shadow-md shadow-fcolor space-y-4 sm:space-y-6 font-work">
       <div>
         <h3 className="pb-1">{company}</h3>
         <h4 className="text-fcolor">{role}</h4>
-        <p className="text-lg font-light pt-2">
+        <p className="text-sm sm:text-lg font-light pt-2">
           {period} | {location}
         </p>
       </div>
 
-      <p className="text-xl">{description}</p>
+      <p className="text-base sm:text-xl">{description}</p>
 
       <div>
-        <h5 className="text-2xl font-inter font-semibold pb-3">Key Responsibilities</h5>
-        <ul className="list-disc list-inside space-y-2 text-lg">
+        <h5 className="text-lg sm:text-2xl font-inter font-semibold pb-2 sm:pb-3">Key Responsibilities</h5>
+        <ul className="list-disc list-inside space-y-1.5 sm:space-y-2 text-sm sm:text-lg">
           {responsibilities.map((item) => (
             <li key={item}>{item}</li>
           ))}
@@ -100,12 +100,12 @@ function ExperienceCard({
       </div>
 
       <div>
-        <h5 className="text-2xl font-inter font-semibold pb-3">Technologies Used</h5>
-        <div className="flex flex-wrap gap-3">
+        <h5 className="text-lg sm:text-2xl font-inter font-semibold pb-2 sm:pb-3">Technologies Used</h5>
+        <div className="flex flex-wrap gap-2 sm:gap-3">
           {technologies.map((tech) => (
             <span
               key={tech}
-              className="px-4 py-2 text-base shadow-md shadow-fcolor/30 rounded-2xl font-semibold"
+              className="px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base shadow-md shadow-fcolor/30 rounded-xl sm:rounded-2xl font-semibold"
             >
               {tech}
             </span>
@@ -114,8 +114,8 @@ function ExperienceCard({
       </div>
 
       <div>
-        <h5 className="text-2xl font-inter font-semibold pb-3">What I Learned</h5>
-        <p className="text-xl">{learned}</p>
+        <h5 className="text-lg sm:text-2xl font-inter font-semibold pb-2 sm:pb-3">What I Learned</h5>
+        <p className="text-base sm:text-xl">{learned}</p>
       </div>
     </div>
   );
@@ -123,16 +123,16 @@ function ExperienceCard({
 
 export default function Experience() {
   return (
-    <div className="lg:p-10 space-y-10">
-      <h5 className="text-4xl text-center font-inter font-semibold">Professional Experience</h5>
+    <div className="px-3 lg:p-10 space-y-6 sm:space-y-10">
+      <h5 className="text-2xl sm:text-4xl text-center font-inter font-semibold">Professional Experience</h5>
 
       {experiences.map((experience) => (
         <ExperienceCard key={experience.company} {...experience} />
       ))}
 
-      <div className="p-5 lg:p-10 text-xl font-work lg:rounded-5xl shadow-md shadow-fcolor space-y-4">
+      <div className="p-4 sm:p-5 lg:p-10 text-base sm:text-xl font-work lg:rounded-5xl shadow-md shadow-fcolor space-y-3 sm:space-y-4">
         <h3 className="pb-2">Career Growth</h3>
-        <p className="text-2xl font-inter font-semibold text-fcolor">
+        <p className="text-lg sm:text-2xl font-inter font-semibold text-fcolor">
           Internship → React Developer → Junior Front-End Developer
         </p>
         <p>

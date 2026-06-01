@@ -22,7 +22,7 @@ export default function StaggeredFade({ text }: StaggeredFadeProps) {
     <motion.h1
       initial="hidden"
       animate="visible"
-      className="text-center mt-8 md:p-10 px-6 font-work font-semibold text-5xl md:text-8xl mb-20"
+      className="text-center mt-4 sm:mt-8 md:p-10 px-4 sm:px-6 font-work font-semibold text-2xl sm:text-5xl md:text-8xl mb-10 sm:mb-20"
     >
       {words.map((word, i) => (
         <motion.span key={word + i} variants={wordVariants} custom={i}>

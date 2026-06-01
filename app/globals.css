@@ -12,19 +12,19 @@
 }
 
 h1 {
-  @apply text-5xl md:text-6xl font-bold font-work;
+  @apply text-3xl sm:text-5xl md:text-6xl font-bold font-work;
 }
 h2 {
-  @apply text-5xl sm:text-8xl font-semibold font-work;
+  @apply text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-semibold font-work;
 }
 h3{
-  @apply text-4xl sm:text-5xl lg:text-6xl font-bold font-open;
+  @apply text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-open;
 }
 h4{
-  @apply text-3xl md:text-5xl font-work font-semibold;
+  @apply text-xl sm:text-3xl md:text-5xl font-work font-semibold;
 }
 p{
-  @apply text-base 2xl:text-lg font-medium;
+  @apply text-sm sm:text-base 2xl:text-lg font-medium;
 }
 
 @layer utilities {

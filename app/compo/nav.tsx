@@ -15,9 +15,9 @@ const navItems = [
 /** Customize pill + slanted shape layout here */
 const NAV_SHAPE = {
   pillClassName:
-    'flex w-full items-center justify-between gap-2 px-3 py-2 sm:gap-4 sm:px-5 sm:py-2.5',
+    'flex w-full items-center justify-between gap-1 px-2 py-1.5 sm:gap-4 sm:px-5 sm:py-2.5',
   slantedClassName:
-    'flex items-center justify-between gap-1 px-1 sm:gap-2 sm:px-2',
+    'flex items-center justify-between gap-0.5 px-0.5 sm:gap-2 sm:px-2',
   /** Inset in viewBox units — increase values for more padding / thicker border look */
   slantedInset: {
     top: 0,
@@ -113,8 +113,8 @@ export default function Nav() {
     <nav
       ref={navRef}
       aria-label="Main navigation"
-      className="fixed z-50 w-[calc(100%-1.5rem)] max-w-md will-change-transform sm:max-w-xl"
-      style={{ transform: 'translate3d(-50%, 0, 0)', left: '50%', bottom: 16 }}
+      className="fixed z-50 w-[calc(100%-1rem)] max-w-md will-change-transform sm:w-[calc(100%-1.5rem)] sm:max-w-xl"
+      style={{ transform: 'translate3d(-50%, 0, 0)', left: '50%', bottom: 12 }}
     >
       <ShapeShell
         variant={navMode === 'dock' ? 'slanted' : 'pill'}
@@ -126,14 +126,15 @@ export default function Nav() {
         <Link
           href="/"
           aria-current={isActive('/') ? 'page' : undefined}
-          className={`shrink-0 rounded-full px-2 py-1 transition-all duration-200 sm:px-3 ${
+          className={`shrink-0 rounded-full px-1.5 py-0.5 transition-all duration-200 sm:px-3 sm:py-1 ${
             isActive('/')
               ? 'bg-fcolor text-white'
               : 'text-fcolor hover:bg-fcolor/10 active:scale-95'
           }`}
         >
-          <span className="font-work text-xs font-bold uppercase tracking-wide sm:text-sm">
-            Yug Prajapati
+          <span className="font-work text-[10px] font-bold uppercase tracking-wide sm:text-sm">
+            <span className="hidden sm:inline">Yug Prajapati</span>
+            <span className="sm:hidden">Yug</span>
           </span>
         </Link>
 
@@ -147,14 +148,14 @@ export default function Nav() {
                 href={href}
                 aria-label={label}
                 aria-current={active ? 'page' : undefined}
-                className={`relative flex items-center justify-center rounded-full p-1.5 transition-all duration-200 sm:p-2 `}
+                className={`relative flex items-center justify-center rounded-full p-1 transition-all duration-200 sm:p-2 `}
               >
                 <Image
                   src={active ? activeIcon : icon}
                   width={120}
                   height={32}
                   alt={label}
-                  className="h-6 w-auto sm:h-7"
+                  className="h-5 w-auto sm:h-7"
                 />
               </Link>
             )

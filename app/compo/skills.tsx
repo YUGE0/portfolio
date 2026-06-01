@@ -47,17 +47,17 @@ export default function ParallaxSkills({ skills, baseVelocity = 5 }: ParallaxSki
   });
 
   return (
-    <div className="overflow-hidden whitespace-nowrap w-full py-10">
-      <motion.div className="flex will-change-transform gap-10" style={{ x }}>
+    <div className="overflow-hidden whitespace-nowrap w-full py-6 sm:py-10">
+      <motion.div className="flex will-change-transform gap-6 sm:gap-10" style={{ x }}>
         {[...Array(100)].map((_, i) => (
-          <div key={i} className="flex space-x-10 gap-2">
+          <div key={i} className="flex space-x-6 sm:space-x-10 gap-2">
             {skills.map((skill, index) => (
               <div
                 key={index}
-                className="w-52 xl:w-80 m-2 p-2 px-4 shadow-md shadow-fcolor/30 rounded-2xl flex justify-between items-center"
+                className="w-36 sm:w-52 xl:w-80 m-1 sm:m-2 p-2 px-3 sm:px-4 shadow-md shadow-fcolor/30 rounded-xl sm:rounded-2xl flex justify-between items-center"
               >
-                <h1 className="text-xl xl:text-3xl font-semibold uppercase mr-4 p-2">{skill}</h1>
-                <Image alt={skill} width={40} height={40} src={`/${skill}.svg`} />
+                <h1 className="text-base sm:text-xl xl:text-3xl font-semibold uppercase mr-2 sm:mr-4 p-1 sm:p-2">{skill}</h1>
+                <Image alt={skill} width={40} height={40} className="w-7 h-7 sm:w-10 sm:h-10 shrink-0" src={`/${skill}.svg`} />
               </div>
             ))}
           </div>

@@ -18,10 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className="overflow-x-hidden">
         <AppLoader>
           <Scro/>
-          <div className="pb-28">
+          <div className="pb-24 sm:pb-28">
             {children}
             <SpeedInsights/>
           </div>

@@ -49,12 +49,12 @@ export default function page() {
   return (
     <PageLoader page='My Work' speed={1200}>
       <Image className="w-full" src="/workp.svg" width={1200} height={0} alt="Ongoing Projects"/>
-    <div className="p-2 md:p-12 mb-20">
+    <div className="px-3 sm:p-2 md:p-12 mb-12 sm:mb-20">
       <StaggeredFade text="Developing websites with morden technologies."/>
-      <Image className="w-full my-10 sm:w-4/6 md:w-3/6 xl:w-2/6" src="/opbg.svg" width={100} height={0} alt="Ongoing Projects"/>
+      <Image className="w-full my-6 sm:my-10 sm:w-4/6 md:w-3/6 xl:w-2/6" src="/opbg.svg" width={100} height={0} alt="Ongoing Projects"/>
       {Onprojects.map((project) => (<WorkCom key={project.project} {...project} />))}
-      <Image className="w-full my-10 sm:w-4/6 md:w-3/6 xl:w-2/6" src="/pbg.svg" width={100} height={0} alt="Projects"/>
-      <div className="grid gap-10">
+      <Image className="w-full my-6 sm:my-10 sm:w-4/6 md:w-3/6 xl:w-2/6" src="/pbg.svg" width={100} height={0} alt="Projects"/>
+      <div className="grid gap-6 sm:gap-10">
         {projects.map((project) => (<WorkCom key={project.project} {...project} />))}
       </div>
     </div>
