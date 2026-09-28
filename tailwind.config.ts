@@ -9,7 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        fcolor:"#2A4064",
+        fcolor: "#2A4064",
+        accent: "#5BA8F5",
       },
       borderRadius:{
         '5xl': '2rem',
@@ -17,7 +18,8 @@ const config: Config = {
       fontFamily:{
         open:['Open Sans'],
         work:["Work Sans"],
-        inter:["Inter"],
+        inter:['var(--font-inter)', 'Inter', 'sans-serif'],
+        satoshi:['var(--font-satoshi)', 'Satoshi', 'sans-serif'],
       },   
       cursor:{
         "&":'url("/andp.svg"), auto',

@@ -1,6 +1,6 @@
 import React from 'react'
 
-interface ExperienceProps {
+export interface ExperienceProps {
   company: string;
   role: string;
   period: string;
@@ -11,7 +11,7 @@ interface ExperienceProps {
   learned: string;
 }
 
-const experiences: ExperienceProps[] = [
+export const experiences: ExperienceProps[] = [
   {
     company: "FastOne Global Markets",
     role: "Junior Front-End Developer",

@@ -1,12 +1,10 @@
-import React from 'react'
-import ParallaxText from '../compo/ParallaxText'
+import CaseStudyPage from '../compo/CaseStudyPage'
+import PageLoader from '../compo/PageLoader'
 
 export default function Page() {
   return (
-    <div className="h-screen text-fcolor content-center">
-        <ParallaxText baseVelocity={10}>FOOD HOUSE</ParallaxText>
-        <ParallaxText baseVelocity={8}>Working</ParallaxText>
-        <ParallaxText baseVelocity={-3}>Wait for it</ParallaxText>
-    </div>
+    <PageLoader page="Food House" speed={1200}>
+      <CaseStudyPage slug="foodHouse" />
+    </PageLoader>
   )
 }
