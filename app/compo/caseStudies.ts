@@ -3,6 +3,7 @@ export type Shot = {
   w: number
   h: number
   alt: string
+  mock?: 'dashboard' | 'plans'
 }
 
 export type Point = { title: string; text: string }
@@ -11,9 +12,17 @@ export type Feature = {
   eyebrow: string
   shot?: Shot
   frame?: 'browser' | 'plain'
-  demo?: 'engine-sound'
+  demo?: 'engine-sound' | 'host-switcher' | 'privacy-wallet'
   points: Point[]
   learning: string
+}
+
+export type Challenge = {
+  title: string
+  problem: string
+  solution: string
+  before: { label: string; items: string[] }
+  after: { label: string; items: string[] }
 }
 
 export type CaseStudy = {
@@ -33,12 +42,209 @@ export type CaseStudy = {
   highlights: Point[]
   gallery?: Array<{ label: string; shots: Shot[] }>
   features: Feature[]
+  stats?: Array<{ value: string; label: string }>
+  challenge?: Challenge
   roadmap?: Point[]
 }
 
-const shot = (src: string, w: number, h: number, alt: string): Shot => ({ src, w, h, alt })
+const shot = (src: string, w: number, h: number, alt: string, mock?: Shot['mock']): Shot => ({ src, w, h, alt, mock })
+
+const pw = (file: string, alt: string, mock?: Shot['mock']) => shot(`/position-wise/${file}`, 1900, 1188, alt, mock)
 
 export const caseStudies: CaseStudy[] = [
+  {
+    slug: 'position-wise',
+    index: '01',
+    name: 'Position Wise',
+    category: 'Multi-product SaaS',
+    tagline: 'One codebase, three products: an advisory SaaS, a finance tracker and the console that runs them.',
+    summary:
+      'Position Wise is a multi-tenant Next.js and Supabase platform. Investment advisory firms each get their own subdomain with live markets, trade and invest broadcasts, subscription plans and a full admin control center. Wise Track, a sibling product on its own host, is a free personal ledger for expenses, income, transfers and credit cards. It started as a single advisory app, grew into org multi-tenancy, and was then split into separate product hosts so each product could grow independently while still sharing a single login.',
+    status: 'Live',
+    meta: [
+      { label: 'Client', value: 'Position Wise Advisory' },
+      { label: 'Timeline', value: 'Mar 2026 – Sep 2026' },
+      { label: 'Type', value: 'Multi-tenant SaaS' },
+      { label: 'Products', value: 'Advisory · Wise Track · Owner' },
+    ],
+    stack: [
+      'Next.js 16',
+      'React 19',
+      'TypeScript',
+      'Tailwind CSS 4',
+      'shadcn/ui',
+      'Radix UI',
+      'Recharts',
+      'Sonner',
+      'lucide-react',
+      'CVA',
+      'Supabase Auth',
+      'Postgres + RLS',
+      'Supabase Storage',
+      '@supabase/ssr',
+      'Google OAuth',
+      'Vercel',
+      'ESLint',
+    ],
+    links: [],
+    hero: pw('adv-dashboard.png', 'Advisory dashboard', 'dashboard'),
+    heroFrame: 'browser',
+    highlights: [
+      {
+        title: 'Subdomain multi-tenancy',
+        text: 'Every advisory firm runs on its own subdomain with scoped members, plans, billing and admin, all from one deployment.',
+      },
+      {
+        title: 'Live advisory desk',
+        text: 'A live market board plus trade and invest broadcasts with P/L feedback and tier-gated tips.',
+      },
+      {
+        title: 'Wise Track',
+        text: 'A sibling finance app with a wallet-style card carousel, activity-flow analytics and privacy masking.',
+      },
+    ],
+    stats: [
+      { value: '~112', label: 'Commits' },
+      { value: '7', label: 'Build phases' },
+      { value: '4', label: 'Product hosts' },
+      { value: '~35', label: 'Distinct screens' },
+    ],
+    gallery: [
+      {
+        label: 'Website',
+        shots: [
+          pw('web-home.png', 'Home page pitching Advisory and Track'),
+          pw('web-advisory.png', 'Advisory marketing landing'),
+          pw('web-sign-up.png', 'Email and Google sign-up'),
+        ],
+      },
+      {
+        label: 'Advisory',
+        shots: [
+          pw('adv-dashboard.png', 'Live market board and broadcast workspace'),
+          pw('adv-subscribe.png', 'Plan picker with payment-proof upload'),
+          pw('adv-tips.png', 'Tier-gated tip modules'),
+          pw('adv-wait-approval.png', 'Pending admin approval state'),
+        ],
+      },
+      {
+        label: 'Admin',
+        shots: [
+          pw('adv-admin.png', 'Control center overview metrics'),
+          pw('adv-admin-broadcast.png', 'Publish and manage broadcasts'),
+          pw('adv-admin-subs.png', 'Approve or reject subscriptions with proof viewer'),
+          pw('adv-admin-users.png', 'Member roster and weekly trade usage'),
+        ],
+      },
+      {
+        label: 'Wise Track',
+        shots: [
+          pw('trk-landing.png', 'Wise Track marketing page'),
+          pw('trk-overview.png', 'Month dashboard'),
+          pw('trk-expenses.png', 'Filterable ledger'),
+          pw('trk-accounts.png', 'Wallet-style accounts carousel'),
+          pw('trk-analytics.png', 'Activity flow and spend charts'),
+          pw('trk-profile.png', 'Settings, categories and theme customizer'),
+        ],
+      },
+      { label: 'Platform', shots: [pw('plt-owner.png', 'Owner console: create orgs and assign members')] },
+    ],
+    features: [
+      {
+        eyebrow: 'One Brand, Many Tenants',
+        demo: 'host-switcher',
+        points: [
+          {
+            title: 'Host-aware edge proxy',
+            text: 'proxy.ts reads the subdomain and tags each request with x-subdomain and x-product (tenant, track or owner), then refreshes the session and enforces auth gates before a page renders.',
+          },
+          {
+            title: 'Reserved product hosts',
+            text: 'track, owner and www can never become org slugs, so new products get their own hosts instead of being bolted into a tenant.',
+          },
+          {
+            title: 'Shared login across subdomains',
+            text: 'One Supabase user and a parent-domain auth cookie keep OAuth working as users hop between hosts, while org-scoped subscriptions mean billing never leaks between tenants.',
+          },
+        ],
+        learning:
+          'Multi-tenancy is mostly a routing and identity problem before it is a data problem. Centralising access in one resolver (getCurrentUserAccess → route) made every new host and waiting state cheap to add.',
+      },
+      {
+        eyebrow: 'The Advisory Desk',
+        shot: pw('adv-dashboard.png', 'Live market board and broadcast workspace', 'dashboard'),
+        points: [
+          {
+            title: 'Live market board',
+            text: 'Admin-managed symbols feed a live quote board alongside trade and invest broadcast tabs.',
+          },
+          {
+            title: 'Broadcasts with feedback',
+            text: 'Admins publish calls, members report P/L, and non-private calls get a public share link.',
+          },
+          {
+            title: 'Weekly trade limits',
+            text: 'Plan tiers cap trade usage, and admins can see it per member in the roster.',
+          },
+        ],
+        learning:
+          'Power-user dashboards need hierarchy more than features. Splitting trade and invest into tabs made the board scannable.',
+      },
+      {
+        eyebrow: 'Membership That Pays',
+        shot: pw('adv-subscribe.png', 'Plan picker with payment-proof upload', 'plans'),
+        points: [
+          {
+            title: 'Payment-proof onboarding',
+            text: 'Members choose a plan and upload proof of payment to Supabase Storage.',
+          },
+          {
+            title: 'Admin approval loop',
+            text: 'Admins review proofs in a viewer dialog and approve or cancel from one table.',
+          },
+          {
+            title: 'Honest waiting states',
+            text: '/waiting (no org yet) and /wait-approval (paid, pending review) are deliberately separate, so users always know what is blocking them.',
+          },
+        ],
+        learning:
+          'Manual payment flows are fine if every state has a clear screen. Splitting the two waiting states noticeably reduced confusion.',
+      },
+      {
+        eyebrow: 'Wise Track Comes Alive',
+        demo: 'privacy-wallet',
+        points: [
+          {
+            title: 'Wallet-style accounts',
+            text: 'Cash, bank and credit cards in a carousel with card networks and shared credit-limit pools.',
+          },
+          {
+            title: 'Month-centric analytics',
+            text: 'Day and month calendar views and a custom activity-flow chart built with Recharts.',
+          },
+          {
+            title: 'Personal touches',
+            text: 'Privacy mode masks every amount, and theme presets and washes are saved per user.',
+          },
+        ],
+        learning:
+          'Shipping Track as a separate product host rather than a tenant feature let it have its own shell, branding and nav without touching the advisory code.',
+      },
+    ],
+    challenge: {
+      title: 'Splitting a live app without breaking a URL',
+      problem:
+        'The app had grown from a single advisory product into several, and the code needed to move into separate web, advisory and track folders while real users kept using the same public URLs.',
+      solution:
+        'Next.js rewrites (mapToProduct) map every stable public path onto its new product folder, so /dashboard, /admin and /app never changed while the code moved underneath.',
+      before: { label: 'Single advisory app', items: ['/dashboard', '/admin', '/app', 'One shell, one brand'] },
+      after: {
+        label: 'Multi-product hosts',
+        items: ['web/ — marketing site', 'advisory/ — tenant subdomains', 'track/ — Wise Track', 'owner/ — platform console'],
+      },
+    },
+    roadmap: [{ title: 'Budgets', text: 'Per-category monthly budgets in Wise Track. The screen already exists as a placeholder.' }],
+  },
   {
     slug: 'mitreisen',
     index: '02',

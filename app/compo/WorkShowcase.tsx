@@ -189,7 +189,7 @@ export default function WorkShowcase() {
             <p className="font-inter text-[11px] font-medium uppercase tracking-[0.32em] text-accent sm:text-xs">Selected Work</p>
             <h1 className="mt-4 font-satoshi text-5xl font-black leading-[0.95] tracking-[-0.04em] sm:text-7xl xl:text-[5.5rem]">
               <span className="block text-fcolor">Things I&apos;ve</span>
-              <span className="block bg-gradient-to-b from-[#6db3f7] to-[#4a8fe8] bg-clip-text pb-[0.08em] text-transparent">
+              <span className="block bg-gradient-to-b from-[#6db3f7] to-[#4a8fe8] bg-clip-text -mb-[0.1em] pb-[0.18em] text-transparent">
                 Designed &amp; Built
               </span>
             </h1>
@@ -240,6 +240,15 @@ export default function WorkShowcase() {
               <div className="mt-5">
                 <TechChips tech={['Next.js', 'TypeScript', 'Tailwind CSS', 'Supabase']} />
               </div>
+              <Link
+                href="/position-wise"
+                className="group/cta mt-7 inline-flex h-12 w-fit items-center gap-5 rounded-full bg-fcolor pl-6 pr-1.5 font-inter text-sm font-semibold text-white shadow-[0_12px_30px_-10px_rgba(42,64,100,0.6)] transition hover:bg-fcolor/90 active:scale-[0.98]"
+              >
+                View Case Study
+                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white text-fcolor transition-transform group-hover/cta:translate-x-0.5">
+                  <ArrowIcon />
+                </span>
+              </Link>
             </div>
 
             <div className="relative h-[250px] overflow-hidden sm:h-[380px] lg:h-auto lg:min-h-[460px]">

@@ -211,7 +211,7 @@ export default function FeaturedWork() {
             <p className="font-inter text-[11px] font-medium uppercase tracking-[0.32em] text-accent sm:text-xs">Featured Work</p>
             <h2 className="mt-4 font-satoshi text-5xl font-black leading-[0.95] tracking-[-0.04em] sm:text-6xl lg:text-[4rem] xl:text-[4.75rem]">
               <span className="block text-fcolor">Projects</span>
-              <span className="block bg-gradient-to-b from-[#6db3f7] to-[#4a8fe8] bg-clip-text pb-[0.08em] text-transparent">
+              <span className="block bg-gradient-to-b from-[#6db3f7] to-[#4a8fe8] bg-clip-text -mb-[0.1em] pb-[0.18em] text-transparent">
                 I&apos;ve Built
               </span>
             </h2>
@@ -247,7 +247,7 @@ export default function FeaturedWork() {
                   <TechChips tech={['Next.js', 'TypeScript', 'Tailwind CSS', 'Supabase']} />
                 </div>
                 <Link
-                  href="/work"
+                  href="/position-wise"
                   aria-label="View Position Wise Advisory"
                   className="mt-7 grid h-12 w-12 place-items-center rounded-full bg-fcolor text-white transition hover:bg-fcolor/90 group-hover:translate-x-0.5"
                 >
@@ -271,7 +271,7 @@ export default function FeaturedWork() {
             </div>
 
             <Link
-              href="/work"
+              href="/position-wise"
               aria-label="Open Position Wise Advisory"
               className="absolute right-5 top-5 z-20 grid h-10 w-10 place-items-center rounded-full border border-fcolor/10 bg-white/80 text-fcolor transition hover:border-fcolor hover:bg-fcolor hover:text-white"
             >

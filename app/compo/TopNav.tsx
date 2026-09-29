@@ -117,7 +117,7 @@ export default function TopNav() {
           className="pointer-events-auto absolute left-1/2 top-0 z-10 -translate-x-1/2"
         >
           <span className="flex h-11 items-end justify-center rounded-b-[1.5rem] bg-white px-7 pb-2 pt-3 shadow-[0_8px_30px_rgba(42,64,100,0.12)] sm:h-14 sm:rounded-b-[1.75rem] sm:px-9 sm:pb-2.5">
-            <span className="font-satoshi text-2xl font-black tracking-tight text-fcolor sm:text-3xl">
+            <span data-loader-target="brand" className="font-satoshi text-2xl font-black tracking-tight text-fcolor sm:text-3xl">
               Yug<span className="text-accent">.</span>
             </span>
           </span>

@@ -235,7 +235,7 @@ export default function SkillsSection() {
           <p className="font-inter text-[11px] font-medium uppercase tracking-[0.32em] text-accent sm:text-xs">Tools &amp; Technologies</p>
           <h2 className="mt-4 font-satoshi text-5xl font-black leading-[0.95] tracking-[-0.04em] sm:text-6xl xl:text-[3.6rem]">
             <span className="block whitespace-nowrap text-fcolor">Tools I Work</span>
-            <span className="block bg-gradient-to-b from-[#6db3f7] to-[#4a8fe8] bg-clip-text pb-[0.08em] text-transparent">With</span>
+            <span className="block bg-gradient-to-b from-[#6db3f7] to-[#4a8fe8] bg-clip-text -mb-[0.1em] pb-[0.18em] text-transparent">With</span>
           </h2>
           <p className="mt-5 max-w-md font-inter text-sm leading-relaxed text-fcolor/70 sm:text-base">
             A combination of tools, technologies and practices I use to design, develop and ship modern web experiences.

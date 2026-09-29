@@ -9,6 +9,8 @@ import useSound from 'use-sound'
 import CtaBanner from './CtaBanner'
 import { ArrowIcon, TechChips } from './FeaturedWork'
 import { getCaseStudy, type Feature, type Shot } from './caseStudies'
+import { DashboardMock } from './HeroMocks'
+import { HostSwitcher, PlansMock, PrivacyWallet, ScaledBox } from './PositionWiseDemos'
 
 const cardClass =
   'rounded-3xl border border-white/80 bg-white/70 shadow-[0_24px_60px_-32px_rgba(42,64,100,0.35)] backdrop-blur-sm'
@@ -22,6 +24,80 @@ function ExpandIcon() {
     <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
       <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
     </svg>
+  )
+}
+
+const browserClass =
+  'group relative overflow-hidden rounded-2xl border border-fcolor/10 bg-white shadow-[0_30px_60px_-30px_rgba(42,64,100,0.45)]'
+
+function BrowserBar({ label }: { label: string }) {
+  return (
+    <div className="flex items-center gap-3 border-b border-fcolor/10 bg-[#f6f9fe] px-4 py-2.5">
+      <span className="flex gap-1.5" aria-hidden>
+        <span className="h-2.5 w-2.5 rounded-full bg-[#ff6159]" />
+        <span className="h-2.5 w-2.5 rounded-full bg-[#ffbd2e]" />
+        <span className="h-2.5 w-2.5 rounded-full bg-[#28c941]" />
+      </span>
+      <span className="mx-auto truncate rounded-full bg-white px-4 py-1 font-inter text-[11px] text-fcolor/50 ring-1 ring-fcolor/10">
+        {label}
+      </span>
+      <span className="w-10" aria-hidden />
+    </div>
+  )
+}
+
+function ShotMock({ shot }: { shot: Shot }) {
+  if (shot.mock === 'dashboard' || shot.mock === 'plans') {
+    return (
+      <div className="bg-gradient-to-br from-[#f6f9fe] to-[#e4eefb] p-[4%]">
+        <ScaledBox base={620} ratio={400 / 620}>
+          {shot.mock === 'dashboard' ? <DashboardMock /> : <PlansMock />}
+        </ScaledBox>
+      </div>
+    )
+  }
+
+  return (
+    <div className="grid aspect-[16/10] place-items-center bg-gradient-to-br from-[#f6f9fe] to-[#e4eefb] p-6 text-center">
+      <span>
+        <span className="mx-auto grid h-12 w-12 place-items-center rounded-2xl bg-white text-accent shadow-sm">
+          <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+            <rect x="3" y="4" width="18" height="16" rx="2" />
+            <circle cx="9" cy="10" r="2" />
+            <path d="m21 16-5-5-9 9" />
+          </svg>
+        </span>
+        <span className="mt-3 block font-satoshi text-lg font-bold text-fcolor">{shot.alt}</span>
+        <span className="mt-1 block font-inter text-xs text-fcolor/50">Screenshot coming soon</span>
+      </span>
+    </div>
+  )
+}
+
+function Visual({
+  shot,
+  available,
+  frame = 'browser',
+  label,
+  ratio,
+  onOpen,
+  priority,
+}: {
+  shot: Shot
+  available: boolean
+  frame?: 'browser' | 'plain'
+  label?: string
+  ratio?: number
+  onOpen?: (shot: Shot) => void
+  priority?: boolean
+}) {
+  if (available) return <ShotFrame shot={shot} frame={frame} label={label} ratio={ratio} onOpen={onOpen} priority={priority} />
+
+  return (
+    <div className={browserClass}>
+      <BrowserBar label={label ?? shot.alt} />
+      <ShotMock shot={shot} />
+    </div>
   )
 }
 
@@ -62,18 +138,8 @@ function ShotFrame({
   }
 
   return (
-    <div className="group relative overflow-hidden rounded-2xl border border-fcolor/10 bg-white shadow-[0_30px_60px_-30px_rgba(42,64,100,0.45)]">
-      <div className="flex items-center gap-3 border-b border-fcolor/10 bg-[#f6f9fe] px-4 py-2.5">
-        <span className="flex gap-1.5" aria-hidden>
-          <span className="h-2.5 w-2.5 rounded-full bg-[#ff6159]" />
-          <span className="h-2.5 w-2.5 rounded-full bg-[#ffbd2e]" />
-          <span className="h-2.5 w-2.5 rounded-full bg-[#28c941]" />
-        </span>
-        <span className="mx-auto truncate rounded-full bg-white px-4 py-1 font-inter text-[11px] text-fcolor/50 ring-1 ring-fcolor/10">
-          {label ?? shot.alt}
-        </span>
-        <span className="w-10" aria-hidden />
-      </div>
+    <div className={browserClass}>
+      <BrowserBar label={label ?? shot.alt} />
       <div className="relative overflow-hidden bg-white" style={{ aspectRatio: `${shot.w} / ${frameHeight}` }}>
         <div
           className={`absolute inset-x-0 top-0 ${
@@ -262,20 +328,23 @@ function FeatureRow({
   feature,
   index,
   onOpen,
+  has,
 }: {
   feature: Feature
   index: number
   onOpen: (shot: Shot) => void
+  has: (shot: Shot) => boolean
 }) {
   const flip = index % 2 === 1
 
   return (
     <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-12">
       <div className={flip ? 'lg:order-2' : ''}>
-        {feature.demo === 'engine-sound' ? (
-          <EngineSound />
-        ) : (
-          feature.shot && <ShotFrame shot={feature.shot} frame={feature.frame} onOpen={onOpen} />
+        {feature.demo === 'engine-sound' && <EngineSound />}
+        {feature.demo === 'host-switcher' && <HostSwitcher />}
+        {feature.demo === 'privacy-wallet' && <PrivacyWallet />}
+        {!feature.demo && feature.shot && (
+          <Visual shot={feature.shot} available={has(feature.shot)} frame={feature.frame} onOpen={onOpen} />
         )}
       </div>
 
@@ -307,8 +376,12 @@ function FeatureRow({
   )
 }
 
-export default function CaseStudyPage({ slug }: { slug: string }) {
+export default function CaseStudyPage({ slug, available }: { slug: string; available: string[] }) {
   const { study, next } = getCaseStudy(slug)
+  const has = (shot: Shot) => available.includes(shot.src)
+  const galleryGroups = (study.gallery ?? [])
+    .map((group) => ({ ...group, shots: group.shots.filter(has) }))
+    .filter((group) => group.shots.length > 0)
   const reduceMotion = useReducedMotion()
   const [tab, setTab] = useState(0)
   const [openShot, setOpenShot] = useState<Shot | null>(null)
@@ -325,7 +398,7 @@ export default function CaseStudyPage({ slug }: { slug: string }) {
           transition: { duration: 0.65, delay, ease: [0.22, 1, 0.36, 1] },
         }
 
-  const gallery = study.gallery?.[tab]
+  const gallery = galleryGroups[tab]
 
   return (
     <section className="relative overflow-hidden pb-16 pt-6 sm:pb-24 sm:pt-10">
@@ -421,8 +494,9 @@ export default function CaseStudyPage({ slug }: { slug: string }) {
         </div>
 
         <motion.div className="mt-10 sm:mt-14" {...reveal(0.15)}>
-          <ShotFrame
+          <Visual
             shot={study.hero}
+            available={has(study.hero)}
             frame={study.heroFrame}
             label={study.url ?? study.name}
             ratio={study.heroFrame === 'browser' ? 9 / 16 : 1}
@@ -441,7 +515,21 @@ export default function CaseStudyPage({ slug }: { slug: string }) {
           ))}
         </div>
 
-        {study.gallery && gallery && (
+        {study.stats && (
+          <motion.dl
+            className="mt-5 grid grid-cols-2 gap-px overflow-hidden rounded-3xl bg-fcolor/10 shadow-[0_24px_60px_-32px_rgba(42,64,100,0.35)] md:grid-cols-4"
+            {...reveal(0.1)}
+          >
+            {study.stats.map((item) => (
+              <div key={item.label} className="bg-white/85 p-5 backdrop-blur-sm sm:p-6">
+                <dd className="font-satoshi text-4xl font-black tracking-tight text-fcolor sm:text-5xl">{item.value}</dd>
+                <dt className="mt-1 font-inter text-xs text-fcolor/55 sm:text-sm">{item.label}</dt>
+              </div>
+            ))}
+          </motion.dl>
+        )}
+
+        {gallery && (
           <div className="mt-16 sm:mt-24">
             <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
               <motion.div {...reveal(0)}>
@@ -453,7 +541,7 @@ export default function CaseStudyPage({ slug }: { slug: string }) {
                 aria-label="Screen groups"
                 className="flex w-fit max-w-full gap-1 overflow-x-auto rounded-full border border-white/80 bg-white/70 p-1 shadow-[0_12px_30px_-20px_rgba(42,64,100,0.4)] backdrop-blur-sm"
               >
-                {study.gallery.map((group, i) => {
+                {galleryGroups.map((group, i) => {
                   const active = tab === i
                   return (
                     <button
@@ -514,18 +602,66 @@ export default function CaseStudyPage({ slug }: { slug: string }) {
             <div className="mt-10 space-y-16 sm:space-y-24">
               {study.features.map((feature, i) => (
                 <motion.div key={feature.eyebrow} {...reveal(0)}>
-                  <FeatureRow feature={feature} index={i} onOpen={setOpenShot} />
+                  <FeatureRow feature={feature} index={i} onOpen={setOpenShot} has={has} />
                 </motion.div>
               ))}
             </div>
           </div>
         )}
 
+        {study.challenge && (
+          <motion.div className={`${cardClass} mt-16 p-6 sm:mt-24 sm:p-10`} {...reveal(0)}>
+            <p className={eyebrowClass}>The Hardest Part</p>
+            <h2 className="mt-3 max-w-3xl font-satoshi text-3xl font-black leading-tight tracking-[-0.03em] text-fcolor sm:text-5xl">
+              {study.challenge.title}
+            </h2>
+            <div className="mt-6 grid gap-5 font-inter text-sm leading-relaxed text-fcolor/70 sm:text-base md:grid-cols-2 md:gap-8">
+              <p>
+                <span className="mb-1 block text-[11px] font-semibold uppercase tracking-[0.18em] text-fcolor/45">Problem</span>
+                {study.challenge.problem}
+              </p>
+              <p>
+                <span className="mb-1 block text-[11px] font-semibold uppercase tracking-[0.18em] text-fcolor/45">Solution</span>
+                {study.challenge.solution}
+              </p>
+            </div>
+            <div className="mt-8 grid items-center gap-4 md:grid-cols-[1fr_auto_1.3fr]">
+              <div className="rounded-2xl border border-fcolor/10 bg-white/90 p-5">
+                <p className="font-inter text-[11px] font-semibold uppercase tracking-[0.18em] text-fcolor/45">Before</p>
+                <p className="mt-1 font-satoshi text-lg font-bold text-fcolor">{study.challenge.before.label}</p>
+                <ul className="mt-3 space-y-1.5">
+                  {study.challenge.before.items.map((item) => (
+                    <li key={item} className="rounded-lg bg-[#eef4fd] px-3 py-1.5 font-mono text-xs text-fcolor/75">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <span className="mx-auto grid h-11 w-11 rotate-90 place-items-center rounded-full bg-fcolor text-white md:rotate-0" aria-hidden>
+                <ArrowIcon />
+              </span>
+              <div className="rounded-2xl bg-fcolor p-5 text-white shadow-[0_24px_50px_-24px_rgba(42,64,100,0.7)]">
+                <p className="font-inter text-[11px] font-semibold uppercase tracking-[0.18em] text-white/55">After</p>
+                <p className="mt-1 font-satoshi text-lg font-bold">{study.challenge.after.label}</p>
+                <ul className="mt-3 grid gap-1.5 sm:grid-cols-2">
+                  {study.challenge.after.items.map((item) => (
+                    <li key={item} className="rounded-lg bg-white/10 px-3 py-1.5 font-mono text-xs text-white/85">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </motion.div>
+        )}
+
         {study.roadmap && (
           <div className="mt-16 sm:mt-24">
             <motion.div {...reveal(0)}>
               <p className={eyebrowClass}>Roadmap</p>
-              <h2 className="mt-3 font-satoshi text-3xl font-black tracking-[-0.03em] text-fcolor sm:text-5xl">What&apos;s Being Built</h2>
+              <h2 className="mt-3 font-satoshi text-3xl font-black tracking-[-0.03em] text-fcolor sm:text-5xl">
+                {inProgress ? <>What&apos;s Being Built</> : <>What&apos;s Next</>}
+              </h2>
             </motion.div>
             <ol className="mt-8 grid gap-5 sm:grid-cols-2">
               {study.roadmap.map((item, i) => (
@@ -560,15 +696,21 @@ export default function CaseStudyPage({ slug }: { slug: string }) {
               </span>
             </div>
             <div className="relative aspect-[16/9] overflow-hidden rounded-2xl border border-fcolor/5 bg-white shadow-[0_16px_40px_-22px_rgba(42,64,100,0.45)]">
-              <Image
-                src={next.hero.src}
-                alt=""
-                fill
-                sizes="(min-width: 768px) 50vw, 100vw"
-                className={`transition-transform duration-500 group-hover:scale-[1.03] ${
-                  next.heroFrame === 'plain' ? 'object-contain p-2' : 'object-cover object-top'
-                }`}
-              />
+              {has(next.hero) ? (
+                <Image
+                  src={next.hero.src}
+                  alt=""
+                  fill
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                  className={`transition-transform duration-500 group-hover:scale-[1.03] ${
+                    next.heroFrame === 'plain' ? 'object-contain p-2' : 'object-cover object-top'
+                  }`}
+                />
+              ) : (
+                <div className="absolute inset-0 transition-transform duration-500 group-hover:scale-[1.03]">
+                  <ShotMock shot={next.hero} />
+                </div>
+              )}
             </div>
           </Link>
         </motion.div>

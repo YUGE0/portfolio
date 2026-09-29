@@ -3,7 +3,7 @@ import PageLoader from '../compo/PageLoader'
 
 export default function page() {
   return (
-    <PageLoader page="About me" speed={1200}>
+    <PageLoader page="About">
       <AboutShowcase />
     </PageLoader>
   )

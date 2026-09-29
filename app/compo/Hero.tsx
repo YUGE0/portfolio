@@ -143,7 +143,7 @@ export default function Hero() {
             {...enter(0.14)}
           >
             <span className="block text-fcolor">Design.</span>
-            <span className="block bg-gradient-to-b from-[#6db3f7] to-[#4a8fe8] bg-clip-text pb-[0.08em] text-transparent">
+            <span className="block bg-gradient-to-b from-[#6db3f7] to-[#4a8fe8] bg-clip-text -mb-[0.1em] pb-[0.18em] text-transparent">
               Develop.
             </span>
           </motion.h1>

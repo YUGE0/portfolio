@@ -5,7 +5,7 @@ import SkillsSection from "./compo/SkillsSection";
 
 export default function Home() {
   return (
-    <PageLoader page="Home" speed={400}>
+    <PageLoader page="Home">
       <Hero />
       <FeaturedWork />
       <SkillsSection />

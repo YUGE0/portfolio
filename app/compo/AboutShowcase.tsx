@@ -178,7 +178,7 @@ export default function AboutShowcase() {
             <p className={eyebrowClass}>About Me</p>
             <h1 className="mt-4 font-satoshi text-[2.35rem] font-black leading-[0.95] tracking-[-0.04em] sm:text-7xl lg:text-[3.6rem] xl:text-[4.5rem]">
               <span className="block text-fcolor">Hey, I&apos;m Yug.</span>
-              <span className="block bg-gradient-to-b from-[#6db3f7] to-[#4a8fe8] bg-clip-text pb-[0.08em] text-transparent">
+              <span className="block bg-gradient-to-b from-[#6db3f7] to-[#4a8fe8] bg-clip-text -mb-[0.1em] pb-[0.18em] text-transparent">
                 I Craft for the Web.
               </span>
             </h1>

@@ -4,8 +4,8 @@ import PageLoader from '../compo/PageLoader'
 
 export default function Page() {
   return (
-    <PageLoader page="Autos">
-      <CaseStudyPage slug="auto" available={getAvailableShots()} />
+    <PageLoader page="Position Wise">
+      <CaseStudyPage slug="position-wise" available={getAvailableShots()} />
     </PageLoader>
   )
 }
