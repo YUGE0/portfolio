@@ -29,7 +29,7 @@ const SHELL_CONTEXT: Record<string, ShellContext> = {
     ),
     right: (
       <>
-        Front-End Developer
+        Frontend Developer
       </>
     ),
   },

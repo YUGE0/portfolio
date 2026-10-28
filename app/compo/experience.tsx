@@ -14,7 +14,7 @@ export interface ExperienceProps {
 export const experiences: ExperienceProps[] = [
   {
     company: "FastOne Global Markets",
-    role: "Junior Front-End Developer",
+    role: "Junior Frontend Developer",
     period: "September 2025 – Present",
     location: "Ahmedabad, Gujarat",
     description:
@@ -133,7 +133,7 @@ export default function Experience() {
       <div className="p-4 sm:p-5 lg:p-10 text-base sm:text-xl font-work lg:rounded-5xl shadow-md shadow-fcolor space-y-3 sm:space-y-4">
         <h3 className="pb-2">Career Growth</h3>
         <p className="text-lg sm:text-2xl font-inter font-semibold text-fcolor">
-          Internship → React Developer → Junior Front-End Developer
+          Internship → React Developer → Junior Frontend Developer
         </p>
         <p>
           Over the course of my career, I have progressed from building individual frontend modules to

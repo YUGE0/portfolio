@@ -142,7 +142,7 @@ export default function AppLoader({ children }: { children: ReactNode }) {
 
             <div data-intro-fade>
               <div className="flex items-end justify-between gap-4 px-5 pb-6 sm:px-10 sm:pb-8">
-                <span className="font-inter text-xs text-fcolor/55 sm:text-sm">Front-End Developer</span>
+                <span className="font-inter text-xs text-fcolor/55 sm:text-sm">Frontend Developer</span>
                 <span className="font-satoshi text-5xl font-black tabular-nums tracking-tight sm:text-7xl">
                   {count}
                   <span className="text-accent">%</span>

@@ -86,31 +86,36 @@ export function MitreisenPreview() {
 
 export function FoodHousePreview() {
   return (
-    <div className="flex h-full flex-col bg-[#15120f] text-white">
+    <div className="flex h-full flex-col bg-[#241910] text-[#f6efe6]">
       <div className="flex items-center justify-between px-3 py-2">
         <span className="font-satoshi text-[10px] font-bold">Food House</span>
-        <span className="hidden gap-2.5 font-inter text-[6px] text-white/60 sm:flex">
-          <span>Home</span>
+        <span className="hidden gap-2.5 font-inter text-[6px] text-[#e7c9a0]/70 sm:flex">
           <span>Menu</span>
           <span>About</span>
-          <span>Contact</span>
+          <span>Hours</span>
         </span>
-        <span className="rounded-full bg-[#f3c78b] px-2 py-0.5 font-inter text-[6px] font-semibold text-[#15120f]">Reserve a Table</span>
+        <span className="rounded-full bg-[#e7c9a0] px-2 py-0.5 font-inter text-[6px] font-semibold text-[#241910]">Reserve a Table</span>
       </div>
       <div className="relative flex flex-1 items-center overflow-hidden">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0"
+          style={{ background: 'radial-gradient(ellipse 50% 80% at 80% 50%, rgba(231,201,160,0.16), transparent 70%)' }}
+        />
         <div className="relative z-10 w-[55%] px-4">
-          <span className="block font-satoshi text-[15px] font-bold leading-tight">
+          <span className="font-inter text-[6px] font-semibold uppercase tracking-[0.2em] text-[#e7c9a0]">Café · Since morning</span>
+          <span className="mt-1 block font-satoshi text-[15px] font-bold leading-tight">
             Good Food
             <br />
             Great Moments
           </span>
-          <span className="mt-1 block font-inter text-[6px] text-white/65">Modern dining experience with real time features.</span>
+          <span className="mt-1 block font-inter text-[6px] text-[#f6efe6]/65">Wood-fired plates, cold coffee and a table when you want one.</span>
           <span className="mt-2.5 flex gap-1.5 font-inter text-[6px] font-semibold">
-            <span className="rounded-full bg-[#f3c78b] px-2 py-1 text-[#15120f]">View Menu</span>
-            <span className="rounded-full border border-white/40 px-2 py-1">Book a Table</span>
+            <span className="rounded-full bg-[#e7c9a0] px-2 py-1 text-[#241910]">View Menu</span>
+            <span className="rounded-full border border-[#e7c9a0]/50 px-2 py-1">Book a Table</span>
           </span>
         </div>
-        <div className="absolute -right-[6%] top-1/2 aspect-square w-[46%] -translate-y-1/2 overflow-hidden rounded-full border-4 border-[#2a241e] shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+        <div className="absolute -right-[6%] top-1/2 aspect-square w-[46%] -translate-y-1/2 overflow-hidden rounded-full border-4 border-[#3a2c22] shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
           <div className="absolute left-[-16.3%] top-0 -mt-[126%] aspect-[1440/739] w-[670%]">
             <Image src="/FoodHouseApp.webp" alt="" fill sizes="1000px" className="object-cover" />
           </div>

@@ -141,7 +141,7 @@ const others: Tool[] = [
 const timeline = [
   {
     period: 'Sep 2025 – Present',
-    role: 'Junior Front-End Developer',
+    role: 'Junior Frontend Developer',
     company: 'FastOne Global Markets',
     summary: 'Building an internal CRM platform — dashboards, API integrations and reusable React components.',
   },

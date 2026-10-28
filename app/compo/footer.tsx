@@ -6,11 +6,7 @@ import { useState, type ReactNode } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
 import BackToTop from './backToTop'
 import ContactForm from './ContactForm'
-
-const EMAIL = 'yugprajapati32@gmail.com'
-const LINKEDIN_URL = 'https://www.linkedin.com/in/yug-prajapati-70524926b/'
-const GITHUB_URL = 'https://github.com/YUGE0'
-const FIGMA_URL = 'https://www.figma.com/@_yug'
+import { EMAIL, FIGMA_URL, GITHUB_URL, LINKEDIN_URL } from '../site'
 
 export const icons = {
   mail: (
@@ -48,7 +44,7 @@ export const icons = {
 
 const contactInfo = [
   { label: 'Email', value: EMAIL, href: `mailto:${EMAIL}`, icon: icons.mail, copy: EMAIL },
-  { label: 'LinkedIn', value: 'linkedin.com/in/yug-prajapati', href: LINKEDIN_URL, icon: icons.linkedin, copy: LINKEDIN_URL },
+  { label: 'LinkedIn', value: 'linkedin.com/in/yug-prajapati-70524926b', href: LINKEDIN_URL, icon: icons.linkedin, copy: LINKEDIN_URL },
   { label: 'GitHub', value: 'github.com/YUGE0', href: GITHUB_URL, icon: icons.github, copy: GITHUB_URL },
   { label: 'Location', value: 'Ahmedabad, Gujarat, India', icon: icons.pin },
 ]
@@ -107,7 +103,7 @@ function CopyButton({ value, label }: { value: string; label: string }) {
   )
 }
 
-export function ContactSection() {
+export function ContactSection({ headingLevel: Heading = 'h2' }: { headingLevel?: 'h1' | 'h2' }) {
   const reduceMotion = useReducedMotion()
 
   const reveal = (delay: number) =>
@@ -137,36 +133,18 @@ export function ContactSection() {
             <p className="font-inter text-[11px] font-semibold uppercase tracking-[0.28em] text-accent sm:text-xs">
               Let&apos;s work together
             </p>
-            <h2 className="mt-4 font-satoshi text-5xl font-bold leading-[0.95] tracking-tight text-fcolor sm:text-6xl lg:text-[4.25rem] xl:text-[4.75rem]">
+            <Heading className="mt-4 font-satoshi text-5xl font-bold leading-[0.95] tracking-tight text-fcolor sm:text-6xl lg:text-[4.25rem] xl:text-[4.75rem]">
               Let&apos;s{' '}
               <span className="bg-gradient-to-b from-accent to-[#3B7FD4] bg-clip-text text-transparent">Build</span>
               <br />
               Something
               <br />
               Great<span className="text-accent">.</span>
-            </h2>
+            </Heading>
             <p className="mt-6 max-w-md font-inter text-sm leading-relaxed text-fcolor/70 sm:text-base">
               I&apos;m always open to discussing new opportunities, exciting projects or just a good
               conversation about design, development and ideas.
             </p>
-
-            <div
-              aria-hidden
-              className="pointer-events-none absolute -bottom-[25rem] -left-44 hidden h-[640px] w-[640px] [mask-image:linear-gradient(to_bottom,black_18%,transparent_38%)] lg:block"
-            >
-              <div className="hero-globe absolute inset-0 rounded-full bg-[radial-gradient(circle_at_60%_25%,rgba(160,205,255,0.55),rgba(91,168,245,0.25)_45%,transparent_70%)]" />
-              <svg className="absolute inset-0 h-full w-full opacity-60" viewBox="0 0 400 400" fill="none">
-                <circle cx="200" cy="200" r="150" stroke="white" strokeWidth="0.8" />
-                <ellipse cx="200" cy="200" rx="150" ry="55" stroke="white" strokeWidth="0.6" />
-                <ellipse cx="200" cy="200" rx="150" ry="105" stroke="white" strokeWidth="0.5" />
-                <ellipse cx="200" cy="200" rx="55" ry="150" stroke="white" strokeWidth="0.6" />
-                <ellipse cx="200" cy="200" rx="105" ry="150" stroke="white" strokeWidth="0.5" />
-                <path d="M235 120 Q 300 60 390 110" stroke="white" strokeWidth="0.8" strokeDasharray="3 4" />
-                <circle cx="235" cy="120" r="4" fill="#5BA8F5" />
-                <circle cx="300" cy="150" r="3.5" fill="#5BA8F5" />
-                <circle cx="390" cy="110" r="3" fill="#5BA8F5" />
-              </svg>
-            </div>
 
             <div className="mt-8 inline-flex items-center gap-2 rounded-xl border border-white/80 bg-white/80 px-4 py-3 font-inter text-xs font-medium text-fcolor shadow-md shadow-fcolor/10 backdrop-blur-sm lg:absolute lg:bottom-10 lg:left-0 lg:mt-0">
               <span className="text-fcolor">{icons.pin}</span>

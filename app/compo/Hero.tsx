@@ -84,61 +84,17 @@ export default function Hero() {
         }}
       />
 
-      {/* Orbit lines */}
-      <svg
-        aria-hidden
-        className="pointer-events-none absolute right-0 top-0 -z-10 hidden h-full w-[70%] lg:block"
-        viewBox="0 0 900 800"
-        preserveAspectRatio="xMidYMid slice"
-        fill="none"
-      >
-        <ellipse cx="560" cy="360" rx="520" ry="190" transform="rotate(-14 560 360)" stroke="#fff" strokeWidth="1.2" strokeDasharray="4 7" />
-        <ellipse cx="600" cy="420" rx="420" ry="260" transform="rotate(18 600 420)" stroke="#fff" strokeOpacity="0.7" strokeWidth="1" strokeDasharray="3 8" />
-        <circle cx="720" cy="170" r="4" fill="#5BA8F5" />
-        <circle cx="420" cy="560" r="3.5" fill="#5BA8F5" />
-        <circle cx="880" cy="540" r="3" fill="#5BA8F5" />
-      </svg>
-
-      {/* Globe */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -bottom-[360px] -right-[260px] h-[640px] w-[640px] sm:-bottom-[500px] sm:-right-[280px] sm:h-[820px] sm:w-[820px] lg:-bottom-[690px] lg:-right-[380px] lg:h-[1000px] lg:w-[1000px]"
-      >
-        <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle_at_28%_18%,#ffffff_0%,#d6e8ff_16%,#8ec0f7_38%,#4d8fe0_62%,#2f63b0_85%)] shadow-[0_0_100px_20px_rgba(91,168,245,0.4),inset_-60px_-40px_140px_rgba(20,45,100,0.35)]" />
-        <div className="hero-globe-dots absolute inset-0 rounded-full opacity-60 [mask-image:radial-gradient(circle_at_40%_35%,black_30%,transparent_68%)]" />
-        <svg className="absolute inset-0 h-full w-full" viewBox="0 0 400 400" fill="none">
-          <ellipse cx="200" cy="200" rx="199" ry="70" stroke="#fff" strokeOpacity="0.25" strokeWidth="0.6" />
-          <ellipse cx="200" cy="200" rx="199" ry="135" stroke="#fff" strokeOpacity="0.2" strokeWidth="0.5" />
-          <ellipse cx="200" cy="200" rx="70" ry="199" stroke="#fff" strokeOpacity="0.25" strokeWidth="0.6" />
-          <ellipse cx="200" cy="200" rx="140" ry="199" stroke="#fff" strokeOpacity="0.2" strokeWidth="0.5" />
-          <path d="M70 95 L135 60 L205 42 L270 70 M135 60 L160 120 L205 42 M160 120 L95 150" stroke="#fff" strokeOpacity="0.7" strokeWidth="0.7" />
-          {[
-            [70, 95],
-            [135, 60],
-            [205, 42],
-            [270, 70],
-            [160, 120],
-            [95, 150],
-          ].map(([cx, cy]) => (
-            <g key={`${cx}-${cy}`}>
-              <circle cx={cx} cy={cy} r="5" fill="#fff" opacity="0.35" />
-              <circle cx={cx} cy={cy} r="2.2" fill="#fff" />
-            </g>
-          ))}
-        </svg>
-      </div>
-
       <div className="relative mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-6 px-4 sm:px-8 lg:grid-cols-[1fr_1fr] lg:gap-4 lg:px-12">
         {/* ——— Left copy ——— */}
         <div className="relative z-10 max-w-xl">
-          <motion.p
+          <motion.h1
             className="font-inter text-[11px] font-medium uppercase tracking-[0.32em] text-fcolor/45 sm:text-xs"
             {...enter(0.06)}
           >
-            Design. Develop. Ship.
-          </motion.p>
+            Yug Prajapati · Frontend Developer
+          </motion.h1>
 
-          <motion.h1
+          <motion.p
             className="mt-4 font-satoshi text-[3.75rem] font-black leading-[0.9] tracking-[-0.045em] sm:text-7xl md:text-8xl lg:text-[5.5rem] xl:text-[6.75rem]"
             {...enter(0.14)}
           >
@@ -146,13 +102,13 @@ export default function Hero() {
             <span className="block bg-gradient-to-b from-[#6db3f7] to-[#4a8fe8] bg-clip-text -mb-[0.1em] pb-[0.18em] text-transparent">
               Develop.
             </span>
-          </motion.h1>
+          </motion.p>
 
           <motion.p
             className="mt-5 max-w-md font-inter text-sm leading-relaxed text-fcolor/70 sm:text-[17px] sm:leading-relaxed"
             {...enter(0.24)}
           >
-            I&apos;m Yug Prajapati, a Frontend Developer who turns ideas into fast, beautiful and
+            I build modern React and Next.js applications that turn ideas into fast, beautiful and
             functional web experiences.
           </motion.p>
 
@@ -231,14 +187,14 @@ export default function Hero() {
                 className="absolute inset-0"
                 style={{ transform: 'perspective(2200px) rotateX(10deg) rotateY(-10deg) rotateZ(5deg)', transformStyle: 'preserve-3d' }}
               >
-                <div className="absolute left-[10px] top-[170px]" style={{ transform: 'translateZ(-60px)' }}>
+                <div className="absolute left-[0px] top-[190px]" style={{ transform: 'translateZ(-60px)' }}>
                   <MitreisenMock />
+                </div>
+                <div className="absolute left-[90px] top-[80px]">
+                  <DashboardMock />
                 </div>
                 <div className="absolute left-[700px] top-[170px]" style={{ transform: 'translateZ(-80px)' }}>
                   <FoodHouseMock />
-                </div>
-                <div className="absolute left-[120px] top-[90px]">
-                  <DashboardMock />
                 </div>
               </div>
             </motion.div>

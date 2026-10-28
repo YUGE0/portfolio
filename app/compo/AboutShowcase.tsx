@@ -27,7 +27,7 @@ const highlights = [
   { value: '05', label: 'Featured projects' },
 ]
 
-const careerPath = ['MERN Stack Intern', 'React Developer', 'Junior Front-End Developer']
+const careerPath = ['MERN Stack Intern', 'React Developer', 'Junior Frontend Developer']
 
 const toolbox = [
   { name: 'React', icon: brand.react },
@@ -183,7 +183,7 @@ export default function AboutShowcase() {
               </span>
             </h1>
             <p className="mt-6 max-w-xl font-inter text-sm leading-relaxed text-fcolor/70 sm:text-base">
-              I&apos;m a front-end developer who loves turning ideas into fast, carefully crafted interfaces with React,
+              I&apos;m a frontend developer who loves turning ideas into fast, carefully crafted interfaces with React,
               Next.js and Tailwind CSS. I&apos;m committed to improving my craft every day, and right now I&apos;m building
               Food House.
             </p>
@@ -247,7 +247,7 @@ export default function AboutShowcase() {
                 YP
               </span>
               <p className="mt-4 font-satoshi text-2xl font-bold tracking-tight text-fcolor">Yug Prajapati</p>
-              <p className="mt-0.5 font-inter text-sm text-fcolor/60">Junior Front-End Developer</p>
+              <p className="mt-0.5 font-inter text-sm text-fcolor/60">Junior Frontend Developer</p>
 
               <dl className="mt-5 divide-y divide-fcolor/10 border-y border-fcolor/10 font-inter">
                 {facts.map((fact) => (
